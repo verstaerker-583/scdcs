@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" data-engine-space="no" viewBox="-2100 -2100 4200 4200" xml:lang="en-US">
+  <desc id="svg-desc">Standards-compliant 12 V DC electrical schematic for a small yacht. Includes batteries, overcurrent protection, distribution, lighting, navigation and communications, NMEA 2000 (N2K), bilge systems, solar charging, and RF paths. Each element carries machine-readable IDs and metadata to support validation and automation in accordance with ABYC E-11 and ISO 13297. Structured for both human readability and programmatic parsing.</desc>
+  <g id="cable" data-entity="cable" data-length-required="false" data-lmax-mode="verify-only" data-return-scheme="single-point-bonded" data-vdrop-pct-target="3">
+    <g id="cable.branch" data-circuit-class="branch" data-size-abyc="18" data-size-basis="fuse" data-size-iso="0.75" data-size-refs="ABYC E-11 14.1.1.2–14.1.1.3; ISO 13297 5.4.2">
+      <g id="cable.ais" data-captive-cable="true" data-length="2" data-length-policy="omit-captive" data-mfr="em-trak" data-pn="Accessory Power Cable 2" data-product-url="https://em-trak.com/accessory-power-cable-2" data-sheath="multicore" data-sizing-policy="skip">
+        <a href="https://em-trak.com/accessory-power-cable-2">
+          <g>
+            <g id="cable.ais.neg" data-core="neg" data-from="dist.sw.navcom.term.neg.ais" data-net="dc12.neg" data-to="load.ais.term.neg">
+              <line class="wire" x1="990" x2="1329" y1="-1046" y2="-1385" />
+              <title>cable.ais.neg — dist.sw.navcom.term.neg.ais → load.ais.term.neg</title>
+            </g>
+            <g id="cable.ais.pos" data-core="pos" data-from="switch.ais.pin-3" data-net="dc12.pos" data-to="load.ais.term.pos">
+              <line class="wire" x1="1187" x2="1357" y1="-1187" y2="-1357" />
+              <title>cable.ais.pos — switch.ais.pin-3 → load.ais.term.pos; fuse.sw.navcom.ais</title>
+            </g>
+          </g>
+        </a>
+      </g>
+      <g id="cable.bilge" data-length-policy="display-lmax" data-lmax="[{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:1.8,&quot;size_iso&quot;:0.75,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:2.4,&quot;size_iso&quot;:1.0,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:3.6,&quot;size_iso&quot;:1.5},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:6,&quot;size_iso&quot;:2.5},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:2,&quot;size_awg&quot;:18},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:3.1,&quot;size_awg&quot;:16},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:5,&quot;size_awg&quot;:14}]" data-sheath="multicore" data-size-abyc="16" data-size-iso="1.5">
+        <g>
+          <g id="cable.bilge.auto.pos" data-core="pos" data-from="dist.ao.house.term.pos.bilge.auto" data-net="dc12.pos" data-to="load.bilge.term.auto.pos">
+            <line class="wire" x1="1419" x2="-1039" y1="-34" y2="1464" />
+            <title>cable.bilge.auto.pos — dist.ao.house.term.pos.bilge.auto → load.bilge.term.auto.pos — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 3.6 m / ABYC 3.1 m; fuse.ao.house.bilge.auto</title>
+          </g>
+          <g id="cable.bilge.manual.pos" data-core="pos" data-from="switch.bilge.pin-3" data-net="dc12.pos" data-override="manual" data-to="load.bilge.term.manual.pos">
+            <line class="wire" x1="1236" x2="-1018" y1="127" y2="1498" />
+            <title>cable.bilge.manual.pos — switch.bilge.pin-3 → load.bilge.term.manual.pos — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 3.6 m / ABYC 3.1 m; fuse.ao.house.bilge.manual</title>
+          </g>
+          <g id="cable.bilge.neg" data-core="neg" data-from="dist.ao.house.term.neg.bilge" data-net="dc12.neg" data-to="load.bilge.term.neg">
+            <line class="wire" x1="1463" x2="-997" y1="38" y2="1532" />
+            <title>cable.bilge.neg — dist.ao.house.term.neg.bilge → load.bilge.term.neg — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 3.6 m / ABYC 3.1 m</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.cabin.chart" data-associated-fuse="fuse.sw.lights.chart" data-captive-cable="true" data-length="0.12" data-length-policy="omit-captive" data-sizing-policy="skip">
+        <g>
+          <g id="cable.cabin.chart.neg" data-core="neg" data-from="dist.sw.lights.term.neg.chart" data-net="dc12.neg" data-to="load.chart.term.neg">
+            <line class="wire" x1="28" x2="367" y1="-1468" y2="-1129" />
+            <title>cable.cabin.chart.neg — dist.sw.lights.term.neg.chart → load.chart.term.neg</title>
+          </g>
+          <g id="cable.cabin.chart.pos" data-core="pos" data-from="dist.sw.lights.term.pos.chart" data-net="dc12.pos" data-to="load.chart.term.pos">
+            <line class="wire" x1="0" x2="339" y1="-1440" y2="-1101" />
+            <title>cable.cabin.chart.pos — dist.sw.lights.term.pos.chart → load.chart.term.pos; fuse.sw.lights.chart</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.cabin.down" data-associated-fuse="fuse.sw.lights.down" data-captive-cable="true" data-length="2.5" data-length-policy="omit-captive" data-sheath="multicore" data-sizing-policy="skip">
+        <g>
+          <g id="cable.cabin.down.neg" data-core="neg" data-from="dist.sw.lights.term.neg.down" data-net="dc12.neg" data-to="load.down.term.neg">
+            <line class="wire" x1="-28" x2="311" y1="-1468" y2="-1807" />
+            <title>cable.cabin.down.neg — dist.sw.lights.term.neg.down → load.down.term.neg</title>
+          </g>
+          <g id="cable.cabin.down.pos" data-core="pos" data-from="dist.sw.lights.term.pos.down" data-net="dc12.pos" data-to="load.down.term.pos">
+            <line class="wire" x1="0" x2="339" y1="-1440" y2="-1779" />
+            <title>cable.cabin.down.pos — dist.sw.lights.term.pos.down → load.down.term.pos; fuse.sw.lights.down</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.gps" data-associated-fuse="fuse.sw.navcom.gps" data-captive-cable="true" data-length="1.5" data-length-policy="omit-captive" data-lmax="[{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:12.6,&quot;size_iso&quot;:0.75,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:25.2,&quot;size_iso&quot;:1.5},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:42,&quot;size_iso&quot;:2.5},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:13.8,&quot;size_awg&quot;:18},{&quot;basis&quot;:&quot;mfr&quot;,&quot;len&quot;:8,&quot;size_awg&quot;:16},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:35,&quot;size_awg&quot;:14}]" data-sheath="multicore" data-size-abyc="16" data-size-basis="mfr" data-size-iso="1.5" data-sizing-policy="skip">
+        <g>
+          <g id="cable.gps.neg" data-core="neg" data-from="dist.sw.navcom.term.neg.gps" data-net="dc12.neg" data-to="load.gps.term.neg">
+            <line class="wire" x1="1046" x2="1385" y1="-1046" y2="-707" />
+            <title>cable.gps.neg — dist.sw.navcom.term.neg.gps → load.gps.term.neg — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 25.2 m / MFR 8 m</title>
+          </g>
+          <g id="cable.gps.pos" data-core="pos" data-from="dist.sw.navcom.term.pos.gps" data-net="dc12.pos" data-to="load.gps.term.pos">
+            <line class="wire" x1="1018" x2="1357" y1="-1018" y2="-679" />
+            <title>cable.gps.pos — dist.sw.navcom.term.pos.gps → load.gps.term.pos — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 25.2 m / MFR 8 m; fuse.sw.navcom.gps</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.mast" data-length-policy="omit-minor-load" data-sheath="multicore">
+        <g>
+          <g id="cable.mast.arw.pos" data-core="pos" data-from="switch.mast.pin-5" data-net="dc12.pos" data-to="load.mast.term.pos.arw">
+            <line class="wire" x1="40" x2="40" y1="-1680" y2="-1920" />
+            <title>cable.mast.arw.pos — switch.mast.pin-5 → load.mast.term.pos.arw — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.arw</title>
+          </g>
+          <g id="cable.mast.neg" data-core="neg" data-from="dist.sw.lights.term.neg.mast" data-net="dc12.neg" data-to="load.mast.term.neg">
+            <line class="wire" x1="0" x2="0" y1="-1440" y2="-1920" />
+            <title>cable.mast.neg — dist.sw.lights.term.neg.mast → load.mast.term.neg — ISO 0.75 mm² — ABYC 18 AWG</title>
+          </g>
+          <g id="cable.mast.tri.pos" data-core="pos" data-from="switch.mast.pin-2" data-net="dc12.pos" data-to="load.mast.term.pos.tri">
+            <line class="wire" x1="-40" x2="-40" y1="-1680" y2="-1920" />
+            <title>cable.mast.tri.pos — switch.mast.pin-2 → load.mast.term.pos.tri — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.tri</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.n2k" data-associated-fuse="fuse.sw.navcom.n2k" data-captive-cable="true" data-length="3" data-length-policy="omit-captive" data-sheath="multicore" data-sizing-policy="skip">
+        <g>
+          <g id="cable.n2k.neg" data-core="neg" data-from="dist.sw.navcom.term.neg.n2k" data-net="dc12.neg" data-to="load.n2k.term.neg">
+            <line class="wire" x1="1018" x2="1498" y1="-1058" y2="-1058" />
+            <title>cable.n2k.neg — dist.sw.navcom.term.neg.n2k → load.n2k.term.neg</title>
+          </g>
+          <g id="cable.n2k.pos" data-core="pos" data-from="dist.sw.navcom.term.pos.n2k" data-net="dc12.pos" data-to="load.n2k.term.pos">
+            <line class="wire" x1="1018" x2="1498" y1="-1018" y2="-1018" />
+            <title>cable.n2k.pos — dist.sw.navcom.term.pos.n2k → load.n2k.term.pos; fuse.sw.navcom.n2k</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.n2k.spurs" data-length-policy="omit-catalog-length" data-net="n2k" data-role="spur" data-sheath="multicore" data-sizing-policy="skip">
+        <g>
+          <g id="cable.n2k.drop.ais" data-from="load.n2k.term.drop.ais" data-length="0.25" data-mfr="Actisense" data-pn="A2K-TDC-0M25" data-product-url="https://actisense.com/products/a2k-tdc" data-to="load.ais.term.n2k">
+            <a href="https://actisense.com/products/a2k-tdc">
+              <path class="wire" d="M1498,-1018A184,184 0 0 0 1357,-1357" />
+              <title>cable.n2k.drop.ais — load.n2k.term.drop.ais → load.ais.term.n2k</title>
+            </a>
+          </g>
+          <g id="cable.n2k.drop.depth" data-from="load.n2k.term.drop.depth" data-length="0.4" data-mfr="Raymarine" data-pn="A06045" data-product-url="https://www.raymarine.com/en-us/our-products/networking-and-accessories/seatalk-ng-and-nmea-2000/nmea-2000-devicenet-female-to-seatalk-ng-spur-female-adaptor-cables" data-to="load.depth.term.n2k">
+            <a href="https://www.raymarine.com/en-us/our-products/networking-and-accessories/seatalk-ng-and-nmea-2000/nmea-2000-devicenet-female-to-seatalk-ng-spur-female-adaptor-cables">
+              <path class="wire" d="M1498,-1018A339,339 0 0 1 1018,-538" />
+              <title>cable.n2k.drop.depth — load.n2k.term.drop.depth → load.depth.term.n2k</title>
+            </a>
+          </g>
+          <g id="cable.n2k.drop.gps" data-from="load.n2k.term.drop.gps" data-length="0.4" data-mfr="Raymarine" data-pn="A06045" data-product-url="https://www.raymarine.com/en-us/our-products/networking-and-accessories/seatalk-ng-and-nmea-2000/nmea-2000-devicenet-female-to-seatalk-ng-spur-female-adaptor-cables" data-to="load.gps.term.n2k">
+            <a href="https://www.raymarine.com/en-us/our-products/networking-and-accessories/seatalk-ng-and-nmea-2000/nmea-2000-devicenet-female-to-seatalk-ng-spur-female-adaptor-cables">
+              <path class="wire" d="M1498,-1018A184,184 0 0 1 1357,-679" />
+              <title>cable.n2k.drop.gps — load.n2k.term.drop.gps → load.gps.term.n2k</title>
+            </a>
+          </g>
+          <g id="cable.n2k.drop.vhf" data-from="load.n2k.term.drop.vhf" data-length="0.25" data-mfr="Actisense" data-pn="A2K-TDC-0M25" data-product-url="https://actisense.com/products/a2k-tdc" data-to="load.vhf.term.n2k">
+            <a href="https://actisense.com/products/a2k-tdc">
+              <path class="wire" d="M1498,-1018A339,339 0 0 0 1018,-1498" />
+              <title>cable.n2k.drop.vhf — load.n2k.term.drop.vhf → load.vhf.term.n2k</title>
+            </a>
+          </g>
+        </g>
+      </g>
+      <g id="cable.panel" data-length-policy="omit-panel-short" data-length-refs="ABYC E-11 10.1.1 (Ex 3); ISO 13297 5.3.2(2)">
+        <g id="cable.combiner.panel">
+          <g id="cable.combiner.85" data-associated-fuse="fuse.ao.reserve.combiner" data-core="pos" data-from="dist.ao.reserve.term.pos.combiner" data-net="dc12.pos" data-optional="true" data-to="combiner.term.85">
+            <line class="wire" x1="-1440" x2="0" y1="-40" y2="440" />
+            <title>cable.combiner.85 — dist.ao.reserve.term.pos.combiner → combiner.term.85 — ISO 0.75 mm² — ABYC 18 AWG; fuse.ao.reserve.combiner</title>
+          </g>
+          <g id="cable.combiner.86" data-core="neg" data-from="dist.ao.reserve.term.neg" data-net="dc12.neg" data-to="combiner.term.86">
+            <line class="wire" x1="-1440" x2="0" y1="40" y2="520" />
+            <title>cable.combiner.86 — dist.ao.reserve.term.neg → combiner.term.86 — ISO 0.75 mm² — ABYC 18 AWG</title>
+          </g>
+        </g>
+        <g id="cable.feed" data-core="pos" data-net="dc12.pos">
+          <g id="cable.feed.ais" data-associated-fuse="fuse.sw.navcom.ais" data-from="dist.sw.navcom.term.pos.ais" data-to="switch.ais.pin-2">
+            <line class="wire" x1="1018" x2="1187" y1="-1018" y2="-1187" />
+            <title>cable.feed.ais — dist.sw.navcom.term.pos.ais → switch.ais.pin-2 — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.navcom.ais</title>
+          </g>
+          <g id="cable.feed.bilge.manual.pos" data-associated-fuse="fuse.ao.house.bilge.manual" data-from="dist.ao.house.term.pos.bilge.manual" data-to="switch.bilge.pin-2" data-size-abyc="16" data-size-iso="1.5">
+            <line class="wire" x1="1440" x2="1236" y1="0" y2="127" />
+            <title>cable.feed.bilge.manual.pos — dist.ao.house.term.pos.bilge.manual → switch.bilge.pin-2 — ISO 1.5 mm² — ABYC 16 AWG; fuse.ao.house.bilge.manual</title>
+          </g>
+          <g id="cable.feed.deck">
+            <g>
+              <g id="cable.deck.feed.side" data-associated-fuse="fuse.sw.lights.side" data-from="dist.sw.lights.term.pos.side">
+                <g id="cable.deck.feed.side.1" data-to="switch.deck.pin-4">
+                  <line class="wire" x1="0" x2="-240" y1="-1480" y2="-1480" />
+                  <title>cable.deck.feed.side.1 — dist.sw.lights.term.pos.side → switch.deck.pin-4 — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.side</title>
+                </g>
+                <g id="cable.deck.feed.side.3" data-to="switch.deck.pin-6">
+                  <line class="wire" x1="0" x2="-240" y1="-1400" y2="-1400" />
+                  <title>cable.deck.feed.side.3 — dist.sw.lights.term.pos.side → switch.deck.pin-6 — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.side</title>
+                </g>
+              </g>
+              <g id="cable.deck.feed.stern" data-associated-fuse="fuse.sw.lights.stern" data-from="dist.sw.lights.term.pos.stern" data-to="switch.deck.pin-1">
+                <line class="wire" x1="0" x2="-240" y1="-1440" y2="-1440" />
+                <title>cable.deck.feed.stern — dist.sw.lights.term.pos.stern → switch.deck.pin-1 — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.stern</title>
+              </g>
+            </g>
+          </g>
+          <g id="cable.feed.mast">
+            <g>
+              <g id="cable.mast.feed.arw" data-associated-fuse="fuse.sw.lights.arw" data-from="dist.sw.lights.term.pos.arw" data-to="switch.mast.pin-6">
+                <line class="wire" x1="40" x2="40" y1="-1440" y2="-1680" />
+                <title>cable.mast.feed.arw — dist.sw.lights.term.pos.arw → switch.mast.pin-6 — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.arw</title>
+              </g>
+              <g id="cable.mast.feed.tri" data-associated-fuse="fuse.sw.lights.tri" data-from="dist.sw.lights.term.pos.tri" data-to="switch.mast.pin-1">
+                <line class="wire" x1="-40" x2="-40" y1="-1440" y2="-1680" />
+                <title>cable.mast.feed.tri — dist.sw.lights.term.pos.tri → switch.mast.pin-1 — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.tri</title>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="cable.pv.ctrl" data-length-policy="display-lmax" data-length-refs="ABYC E-11 10.1.1.1.1 (Ex 3)" data-lmax="[{&quot;basis&quot;:&quot;abyc-ex3&quot;,&quot;len_in&quot;:40}]" data-size-abyc="16" data-size-basis="fuse" data-size-iso="1.5" data-size-refs="ABYC E-11, Tbl IV-A; ISO 13297, Ann A">
+          <g id="cable.pv.ctrl.emergency" data-associated-fuse="fuse.ao.house.pv-emergency">
+            <g>
+              <g id="cable.pv.ctrl.emergency.neg" data-core="neg" data-from="pv.ctrl.emergency.term.out.neg" data-net="dc12.neg" data-to="dist.ao.house.term.neg.pv-emergency">
+                <line class="wire" x1="1412" x2="1751" y1="-28" y2="-367" />
+                <title>cable.pv.ctrl.emergency.neg — pv.ctrl.emergency.term.out.neg → dist.ao.house.term.neg.pv-emergency — ISO 1.5 mm² — ABYC 16 AWG — Lmax ABYC 1 m</title>
+              </g>
+              <g id="cable.pv.ctrl.emergency.pos" data-core="pos" data-from="pv.ctrl.emergency.term.out.pos" data-net="dc12.pos" data-to="dist.ao.house.term.pos.pv-emergency">
+                <line class="wire" x1="1440" x2="1779" y1="0" y2="-339" />
+                <title>cable.pv.ctrl.emergency.pos — pv.ctrl.emergency.term.out.pos → dist.ao.house.term.pos.pv-emergency — ISO 1.5 mm² — ABYC 16 AWG — Lmax ABYC 1 m; fuse.ao.house.pv-emergency</title>
+              </g>
+            </g>
+          </g>
+          <g id="cable.pv.ctrl.house" data-associated-fuse="fuse.ao.house.pv-house">
+            <g>
+              <g id="cable.pv.ctrl.house.neg" data-core="neg" data-from="pv.ctrl.house.term.out.neg" data-net="dc12.neg" data-to="dist.ao.house.term.neg.pv-house">
+                <line class="wire" x1="1751" x2="1412" y1="367" y2="28" />
+                <title>cable.pv.ctrl.house.neg — pv.ctrl.house.term.out.neg → dist.ao.house.term.neg.pv-house — ISO 1.5 mm² — ABYC 16 AWG — Lmax ABYC 1 m</title>
+              </g>
+              <g id="cable.pv.ctrl.house.pos" data-core="pos" data-from="pv.ctrl.house.term.out.pos" data-net="dc12.pos" data-to="dist.ao.house.term.pos.pv-house">
+                <line class="wire" x1="1779" x2="1440" y1="339" y2="0" />
+                <title>cable.pv.ctrl.house.pos — pv.ctrl.house.term.out.pos → dist.ao.house.term.pos.pv-house — ISO 1.5 mm² — ABYC 16 AWG — Lmax ABYC 1 m; fuse.ao.house.pv-house</title>
+              </g>
+            </g>
+          </g>
+          <g id="cable.pv.ctrl.reserve" data-associated-fuse="fuse.ao.reserve.pv">
+            <g>
+              <g id="cable.pv.ctrl.reserve.neg" data-core="neg" data-from="pv.ctrl.reserve.term.out.neg" data-net="dc12.neg" data-to="dist.ao.reserve.term.neg.pv-reserve">
+                <line class="wire" x1="-1751" x2="-1412" y1="367" y2="28" />
+                <title>cable.pv.ctrl.reserve.neg — pv.ctrl.reserve.term.out.neg → dist.ao.reserve.term.neg.pv-reserve — ISO 1.5 mm² — ABYC 16 AWG — Lmax ABYC 1 m</title>
+              </g>
+              <g id="cable.pv.ctrl.reserve.pos" data-core="pos" data-from="pv.ctrl.reserve.term.out.pos" data-net="dc12.pos" data-to="dist.ao.reserve.term.pos.pv-reserve">
+                <line class="wire" x1="-1779" x2="-1440" y1="339" y2="0" />
+                <title>cable.pv.ctrl.reserve.pos — pv.ctrl.reserve.term.out.pos → dist.ao.reserve.term.pos.pv-reserve — ISO 1.5 mm² — ABYC 16 AWG — Lmax ABYC 1 m; fuse.ao.reserve.pv</title>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="cable.socket.r" data-associated-fuse="fuse.ao.reserve.socket">
+          <g>
+            <g id="cable.socket.r.neg" data-core="neg" data-from="dist.ao.reserve.term.neg.socket" data-net="dc12.neg" data-to="socket.12v.reserve.term.neg">
+              <line class="wire" x1="-1412" x2="-1751" y1="-28" y2="-367" />
+              <title>cable.socket.r.neg — dist.ao.reserve.term.neg.socket → socket.12v.reserve.term.neg — ISO 0.75 mm² — ABYC 18 AWG</title>
+            </g>
+            <g id="cable.socket.r.pos" data-core="pos" data-from="dist.ao.reserve.term.pos.socket" data-net="dc12.pos" data-to="socket.12v.reserve.term.pos">
+              <line class="wire" x1="-1440" x2="-1779" y1="0" y2="-339" />
+              <title>cable.socket.r.pos — dist.ao.reserve.term.pos.socket → socket.12v.reserve.term.pos — ISO 0.75 mm² — ABYC 18 AWG; fuse.ao.reserve.socket</title>
+            </g>
+          </g>
+        </g>
+        <g id="cable.usb.h" data-associated-fuse="fuse.ao.house.usb">
+          <g>
+            <g id="cable.usb.h.neg" data-core="neg" data-from="dist.ao.house.term.neg.usb" data-net="dc12.neg" data-to="load.usb.h.term.neg">
+              <line class="wire" x1="1440" x2="1920" y1="-40" y2="-40" />
+              <title>cable.usb.h.neg — dist.ao.house.term.neg.usb → load.usb.h.term.neg — ISO 0.75 mm² — ABYC 18 AWG</title>
+            </g>
+            <g id="cable.usb.h.pos" data-core="pos" data-from="dist.ao.house.term.pos.usb" data-net="dc12.pos" data-to="load.usb.h.term.pos">
+              <line class="wire" x1="1440" x2="1920" y1="0" y2="0" />
+              <title>cable.usb.h.pos — dist.ao.house.term.pos.usb → load.usb.h.term.pos — ISO 0.75 mm² — ABYC 18 AWG; fuse.ao.house.usb</title>
+            </g>
+          </g>
+        </g>
+        <g id="cable.usb.r" data-associated-fuse="fuse.ao.reserve.usb">
+          <g>
+            <g id="cable.usb.r.neg" data-core="neg" data-from="dist.ao.reserve.term.neg.usb" data-net="dc12.neg" data-to="load.usb.r.term.neg">
+              <line class="wire" x1="-1440" x2="-1920" y1="-40" y2="-40" />
+              <title>cable.usb.r.neg — dist.ao.reserve.term.neg.usb → load.usb.r.term.neg — ISO 0.75 mm² — ABYC 18 AWG</title>
+            </g>
+            <g id="cable.usb.r.pos" data-core="pos" data-from="dist.ao.reserve.term.pos.usb" data-net="dc12.pos" data-to="load.usb.r.term.pos">
+              <line class="wire" x1="-1440" x2="-1920" y1="0" y2="0" />
+              <title>cable.usb.r.pos — dist.ao.reserve.term.pos.usb → load.usb.r.term.pos — ISO 0.75 mm² — ABYC 18 AWG; fuse.ao.reserve.usb</title>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="cable.pv.panel" data-sheath="multicore" data-size-abyc="16" data-size-iso="1.5">
+        <g id="cable.pv.panel.emergency" data-captive-cable="true" data-length-policy="omit-captive" data-sizing-policy="skip">
+          <g>
+            <g>
+              <circle id="connector.pv.emergency.neg" cx="1018" cy="-291" fill="black" r="20" />
+              <circle id="connector.pv.emergency.pos" cx="1018" cy="-339" fill="red" r="20" />
+            </g>
+            <g id="cable.pv.panel.emergency.adapter" data-connector="SureSeal receptacle/socket" data-length="1" data-length-policy="omit-catalog-length" data-mfr="SunWare" data-pn="30003111" data-product-url="https://en.sunware.solar/products/item_details/30003111">
+              <a href="https://en.sunware.solar/products/item_details/30003111">
+                <g id="cable.pv.panel.emergency.adapter.neg" data-core="neg" data-from="connector.pv.emergency.neg" data-net="neg.pv" data-to="pv.ctrl.emergency.term.in.neg">
+                  <line class="wire" x1="1018" x2="1751" y1="-291" y2="-287" />
+                  <title>cable.pv.panel.emergency.adapter.neg — connector.pv.emergency.neg → pv.ctrl.emergency.term.in.neg</title>
+                </g>
+                <g id="cable.pv.panel.emergency.adapter.pos" data-core="pos" data-from="connector.pv.emergency.pos" data-net="pos.pv" data-to="pv.ctrl.emergency.term.in.pos">
+                  <line class="wire" x1="1018" x2="1779" y1="-339" y2="-339" />
+                  <title>cable.pv.panel.emergency.adapter.pos — connector.pv.emergency.pos → pv.ctrl.emergency.term.in.pos</title>
+                </g>
+              </a>
+            </g>
+            <g id="cable.pv.panel.emergency.pv" data-connector="SureSeal plug" data-length="5" data-length-policy="omit-captive" data-mfr="SunWare">
+              <g id="cable.pv.panel.emergency.neg" data-core="neg" data-from="pv.panel.emergency.term.neg" data-net="neg.pv" data-to="connector.pv.emergency.neg">
+                <line class="wire" x1="-339" x2="1018" y1="-299" y2="-291" />
+                <title>cable.pv.panel.emergency.neg — pv.panel.emergency.term.neg → connector.pv.emergency.neg</title>
+              </g>
+              <g id="cable.pv.panel.emergency.pos" data-core="pos" data-from="pv.panel.emergency.term.pos" data-net="pos.pv" data-to="connector.pv.emergency.pos">
+                <line class="wire" x1="-339" x2="1018" y1="-339" y2="-339" />
+                <title>cable.pv.panel.emergency.pos — pv.panel.emergency.term.pos → connector.pv.emergency.pos</title>
+              </g>
+            </g>
+            <title>SureSeal receptacle/socket</title>
+          </g>
+        </g>
+        <g id="cable.pv.panel.house" data-length-policy="display-lmax" data-lmax="[{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:4.8,&quot;size_iso&quot;:1.5,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:4.2,&quot;size_awg&quot;:16}]" data-size-basis="mfr">
+          <g>
+            <g id="cable.pv.panel.house.neg" data-core="neg" data-from="pv.panel.house.term.neg" data-net="neg.pv" data-to="pv.ctrl.house.term.in.neg">
+              <line class="wire" x1="1461" x2="1742" y1="1003" y2="324" />
+              <title>cable.pv.panel.house.neg — pv.panel.house.term.neg → pv.ctrl.house.term.in.neg — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 4.8 m / ABYC 4.2 m</title>
+            </g>
+            <g id="cable.pv.panel.house.pos" data-core="pos" data-from="pv.panel.house.term.pos" data-net="pos.pv" data-to="pv.ctrl.house.term.in.pos">
+              <line class="wire" x1="1498" x2="1779" y1="1018" y2="339" />
+              <title>cable.pv.panel.house.pos — pv.panel.house.term.pos → pv.ctrl.house.term.in.pos — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 4.8 m / ABYC 4.2 m</title>
+            </g>
+          </g>
+        </g>
+        <g id="cable.pv.panel.reserve" data-length-policy="display-lmax" data-lmax="[{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:4.8,&quot;size_iso&quot;:1.5,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:4.2,&quot;size_awg&quot;:16}]" data-size-basis="mfr">
+          <g>
+            <g id="cable.pv.panel.reserve.neg" data-core="neg" data-from="pv.panel.reserve.term.neg" data-net="neg.pv" data-to="pv.ctrl.reserve.term.in.neg">
+              <line class="wire" x1="-1461" x2="-1742" y1="1003" y2="324" />
+              <title>cable.pv.panel.reserve.neg — pv.panel.reserve.term.neg → pv.ctrl.reserve.term.in.neg — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 4.8 m / ABYC 4.2 m</title>
+            </g>
+            <g id="cable.pv.panel.reserve.pos" data-core="pos" data-from="pv.panel.reserve.term.pos" data-net="pos.pv" data-to="pv.ctrl.reserve.term.in.pos">
+              <line class="wire" x1="-1498" x2="-1779" y1="1018" y2="339" />
+              <title>cable.pv.panel.reserve.pos — pv.panel.reserve.term.pos → pv.ctrl.reserve.term.in.pos — ISO 1.5 mm² — ABYC 16 AWG — Lmax ISO 4.8 m / ABYC 4.2 m</title>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="cable.rte" data-associated-fuse="fuse.sw.navcom.rte" data-length-policy="omit-minor-load">
+        <g>
+          <g id="cable.rte.neg" data-core="neg" data-from="dist.sw.navcom.term.neg.rte" data-net="dc12.neg" data-to="load.rte.term.neg">
+            <line class="wire" x1="990" x2="651" y1="-990" y2="-1329" />
+            <title>cable.rte.neg — dist.sw.navcom.term.neg.rte → load.rte.term.neg — ISO 0.75 mm² — ABYC 18 AWG</title>
+          </g>
+          <g id="cable.rte.pos" data-core="pos" data-from="dist.sw.navcom.term.pos.rte" data-net="dc12.pos" data-to="load.rte.term.pos">
+            <line class="wire" x1="1018" x2="679" y1="-1018" y2="-1357" />
+            <title>cable.rte.pos — dist.sw.navcom.term.pos.rte → load.rte.term.pos — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.navcom.rte</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.side" data-length-policy="omit-minor-load" data-sheath="multicore">
+        <g>
+          <g id="cable.side.neg" data-core="neg" data-from="dist.sw.lights.term.neg.side" data-net="dc12.neg" data-to="load.side.term.neg">
+            <line class="wire" x1="0" x2="-339" y1="-1440" y2="-1779" />
+            <title>cable.side.neg — dist.sw.lights.term.neg.side → load.side.term.neg — ISO 0.75 mm² — ABYC 18 AWG</title>
+          </g>
+          <g id="cable.side.pos" data-core="pos" data-from="switch.deck.pin-2" data-net="dc12.pos" data-to="load.side.term.pos">
+            <line class="wire" x1="-240" x2="-339" y1="-1440" y2="-1779" />
+            <title>cable.side.pos — switch.deck.pin-2 → load.side.term.pos — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.side</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.stern" data-length-policy="omit-minor-load" data-sheath="multicore">
+        <g>
+          <g id="cable.stern.neg" data-core="neg" data-from="dist.sw.lights.term.neg.stern" data-net="dc12.neg" data-to="load.stern.term.neg">
+            <line class="wire" x1="0" x2="-339" y1="-1440" y2="-1101" />
+            <title>cable.stern.neg — dist.sw.lights.term.neg.stern → load.stern.term.neg — ISO 0.75 mm² — ABYC 18 AWG</title>
+          </g>
+          <g id="cable.stern.pos" data-core="pos" data-from="switch.deck.pin-5" data-net="dc12.pos" data-to="load.stern.term.pos">
+            <line class="wire" x1="-240" x2="-339" y1="-1440" y2="-1101" />
+            <title>cable.stern.pos — switch.deck.pin-5 → load.stern.term.pos — ISO 0.75 mm² — ABYC 18 AWG; fuse.sw.lights.stern</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.tiller" data-associated-fuse="fuse.ao.reserve.tiller" data-length-policy="display-lmax" data-lmax="[{&quot;basis&quot;:&quot;mfr&quot;,&quot;len&quot;:4,&quot;size_iso&quot;:2.5},{&quot;basis&quot;:&quot;mfr&quot;,&quot;len&quot;:4,&quot;size_awg&quot;:14},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:5,&quot;len&quot;:4.9,&quot;size_iso&quot;:2.5,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:5,&quot;len&quot;:4.3,&quot;size_awg&quot;:14,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:5,&quot;len&quot;:6.9,&quot;size_awg&quot;:12,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:5,&quot;len&quot;:7.8,&quot;size_iso&quot;:4,&quot;vdrop_pct&quot;:3}]" data-sheath="multicore" data-size-abyc="14" data-size-basis="mfr" data-size-iso="2.5">
+        <g>
+          <g id="cable.tiller.neg" data-core="neg" data-from="dist.ao.reserve.term.neg.tiller" data-net="dc12.neg" data-to="socket.tiller.term.pin2">
+            <line class="wire" x1="-1461" x2="997" y1="34" y2="1532" />
+            <title>cable.tiller.neg — dist.ao.reserve.term.neg.tiller → socket.tiller.term.pin2 — ISO 2.5 mm² — ABYC 14 AWG — Lmax ISO 4.9 m / ABYC 4.3 m / MFR 4 m</title>
+          </g>
+          <g id="cable.tiller.pos" data-core="pos" data-from="dist.ao.reserve.term.pos.tiller" data-net="dc12.pos" data-to="socket.tiller.term.pin1">
+            <line class="wire" x1="-1440" x2="1018" y1="0" y2="1498" />
+            <title>cable.tiller.pos — dist.ao.reserve.term.pos.tiller → socket.tiller.term.pin1 — ISO 2.5 mm² — ABYC 14 AWG — Lmax ISO 4.9 m / ABYC 4.3 m / MFR 4 m; fuse.ao.reserve.tiller</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.vhf" data-associated-fuse="fuse.sw.navcom.vhf" data-lmax="[{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:2.1,&quot;size_iso&quot;:1.0,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:1.6,&quot;size_iso&quot;:0.75,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;len&quot;:1.7,&quot;size_awg&quot;:18,&quot;vdrop_pct&quot;:3}]" data-sheath="multicore">
+        <g>
+          <g id="cable.vhf.neg" data-core="neg" data-from="dist.sw.navcom.term.neg.vhf" data-net="dc12.neg" data-to="load.vhf.term.neg">
+            <line class="wire" x1="978" x2="978" y1="-1018" y2="-1498" />
+            <title>cable.vhf.neg — dist.sw.navcom.term.neg.vhf → load.vhf.term.neg</title>
+          </g>
+          <g id="cable.vhf.pos" data-core="pos" data-from="dist.sw.navcom.term.pos.vhf" data-net="dc12.pos" data-to="load.vhf.term.pos">
+            <line class="wire" x1="1018" x2="1018" y1="-1018" y2="-1498" />
+            <title>cable.vhf.pos — dist.sw.navcom.term.pos.vhf → load.vhf.term.pos — fuse.sw.navcom.vhf</title>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="cable.primary" data-circuit-class="primary" data-length-policy="display-lmax" data-size-abyc="10" data-size-basis="fuse" data-size-iso="6" data-size-refs="ABYC E-11, Tbl IV-A; ISO 13297, Ann A">
+      <g id="cable.feeder" data-circuit-class="feeder" data-core="pos" data-net="dc12.pos">
+        <g id="cable.subfeed.combiner" data-length-policy="display-lmax" data-length-refs="ABYC E-11 10.1.2" data-lmax="[{&quot;basis&quot;:&quot;abyc-ex3&quot;,&quot;len_in&quot;:40}]">
+          <g id="cable.subfeed.combiner.30" data-associated-fuse="fuse.batt.reserve" data-from="dist.ao.reserve.term.pos" data-to="combiner.term.30">
+            <line class="wire" x1="-1440" x2="0" y1="0" y2="480" />
+            <title>cable.subfeed.combiner.30 — dist.ao.reserve.term.pos → combiner.term.30 — ISO 6 mm² — ABYC 10 AWG — Lmax ABYC 1 m; fuse.batt.reserve</title>
+          </g>
+          <g id="cable.subfeed.combiner.87" data-associated-fuse="fuse.batt.house" data-from="dist.ao.house.term.pos" data-to="combiner.term.87">
+            <line class="wire" x1="1440" x2="0" y1="0" y2="480" />
+            <title>cable.subfeed.combiner.87 — dist.ao.house.term.pos → combiner.term.87 — ISO 6 mm² — ABYC 10 AWG — Lmax ABYC 1 m; fuse.batt.house</title>
+          </g>
+        </g>
+        <g id="cable.subfeed.lights.pos" data-from="selector.house.term.output" data-to="dist.sw.lights.term.pos">
+          <line class="wire" x1="0" x2="0" y1="0" y2="-1440" />
+          <title>cable.subfeed.lights.pos — selector.house.term.output → dist.sw.lights.term.pos — ISO 6 mm² — ABYC 10 AWG; fuse.batt.house</title>
+        </g>
+        <g id="cable.subfeed.navcom.pos" data-from="selector.house.term.output" data-to="dist.sw.navcom.term.pos">
+          <line class="wire" x1="0" x2="1018" y1="0" y2="-1018" />
+          <title>cable.subfeed.navcom.pos — selector.house.term.output → dist.sw.navcom.term.pos — ISO 6 mm² — ABYC 10 AWG; fuse.batt.house</title>
+        </g>
+        <g id="cable.subfeed.switch">
+          <g id="cable.subfeed.house.pos" data-from="dist.ao.house.term.pos" data-to="selector.house.term.1">
+            <line class="wire" x1="1440" x2="0" y1="0" y2="0" />
+            <title>cable.subfeed.house.pos — dist.ao.house.term.pos → selector.house.term.1 — ISO 6 mm² — ABYC 10 AWG; fuse.batt.house</title>
+          </g>
+          <g id="cable.subfeed.reserve.pos" data-from="dist.ao.reserve.term.pos" data-to="selector.house.term.2">
+            <line class="wire" x1="-1440" x2="0" y1="0" y2="0" />
+            <title>cable.subfeed.reserve.pos — dist.ao.reserve.term.pos → selector.house.term.2 — ISO 6 mm² — ABYC 10 AWG; fuse.batt.reserve</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.main" data-circuit-class="primary">
+        <g id="cable.main.house" data-associated-fuse="fuse.batt.house" data-length-policy="display-lmax" data-lmax="[{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:15.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:3.3,&quot;selector&quot;:&quot;1&quot;,&quot;size_iso&quot;:6,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:15.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:2.3,&quot;selector&quot;:&quot;1&quot;,&quot;size_iso&quot;:4,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:15.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:3.3,&quot;selector&quot;:&quot;1&quot;,&quot;size_awg&quot;:10,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:15.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:2.1,&quot;selector&quot;:&quot;1&quot;,&quot;size_awg&quot;:12,&quot;vdrop_pct&quot;:3}]" data-size-basis="vdrop" data-size-rationale="fuse">
+          <g id="cable.main.house.neg" data-core="neg" data-from="batt.house.term.neg" data-name="return.main.house" data-net="dc12.neg" data-to="dist.ao.house.term.neg">
+            <path class="wire" d="M1018,1018A1440,1440 0 0 0 1440,0" />
+            <title>cable.main.house.neg — batt.house.term.neg → dist.ao.house.term.neg — ISO 6 mm² — ABYC 10 AWG — Lmax ISO 3.3 m / ABYC 3.3 m</title>
+          </g>
+          <g id="cable.main.house.pos" data-core="pos" data-from="dist.batt.house.term.load" data-net="dc12.pos" data-to="dist.ao.house.term.pos">
+            <line class="wire" x1="1018" x2="1440" y1="538" y2="0" />
+            <title>cable.main.house.pos — dist.batt.house.term.load → dist.ao.house.term.pos — ISO 6 mm² — ABYC 10 AWG — Lmax ISO 3.3 m / ABYC 3.3 m; fuse.batt.house</title>
+          </g>
+        </g>
+        <g id="cable.main.reserve" data-associated-fuse="fuse.batt.reserve" data-length-policy="display-lmax" data-lmax="[{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:21.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:2.4,&quot;selector&quot;:&quot;2&quot;,&quot;size_iso&quot;:6,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:21.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:1.7,&quot;selector&quot;:&quot;2&quot;,&quot;size_iso&quot;:4,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:21.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:2.5,&quot;selector&quot;:&quot;2&quot;,&quot;size_awg&quot;:10,&quot;vdrop_pct&quot;:3},{&quot;basis&quot;:&quot;vdrop&quot;,&quot;i&quot;:21.8,&quot;i_basis&quot;:&quot;selector&quot;,&quot;len&quot;:1.5,&quot;selector&quot;:&quot;2&quot;,&quot;size_awg&quot;:12,&quot;vdrop_pct&quot;:3}]" data-size-basis="vdrop" data-size-rationale="fuse">
+          <g id="cable.main.reserve.neg" data-core="neg" data-from="batt.reserve.term.neg" data-name="return.main.reserve" data-net="dc12.neg" data-to="dist.ao.reserve.term.neg">
+            <path class="wire" d="M-1440,0A1440,1440 0 0 0 -1018,1018" />
+            <title>cable.main.reserve.neg — batt.reserve.term.neg → dist.ao.reserve.term.neg — ISO 6 mm² — ABYC 10 AWG — Lmax ISO 2.4 m / ABYC 2.5 m</title>
+          </g>
+          <g id="cable.main.reserve.pos" data-core="pos" data-from="dist.batt.reserve.term.load" data-net="dc12.pos" data-to="dist.ao.reserve.term.pos">
+            <line class="wire" x1="-1018" x2="-1440" y1="538" y2="0" />
+            <title>cable.main.reserve.pos — dist.batt.reserve.term.load → dist.ao.reserve.term.pos — ISO 6 mm² — ABYC 10 AWG — Lmax ISO 2.4 m / ABYC 2.5 m; fuse.batt.reserve</title>
+          </g>
+        </g>
+      </g>
+      <g id="cable.return-bridge.reserve-house" data-core="neg" data-dist-from="ao.reserve" data-dist-to="ao.house" data-length="1" data-net="dc12.neg" data-role="return-bridge" data-route="AO R→LIGHTS→NAV/COM→AO H" data-size-abyc="10" data-size-iso="6">
+        <g id="neg-bridge-reserve-house.1" data-from="dist.ao.reserve.term.neg" data-to="dist.sw.lights.term.neg">
+          <path class="wire" d="M0,-1440A1440,1440 0 0 0 -1440,0" />
+          <title>neg-bridge-reserve-house.1 — dist.ao.reserve.term.neg → dist.sw.lights.term.neg — ISO 6 mm² — ABYC 10 AWG</title>
+        </g>
+        <g id="neg-bridge-reserve-house.2" data-from="dist.sw.lights.term.neg" data-to="dist.sw.navcom.term.neg">
+          <path class="wire" d="M1018,-1018A1440,1440 0 0 0 0,-1440" />
+          <title>neg-bridge-reserve-house.2 — dist.sw.lights.term.neg → dist.sw.navcom.term.neg — ISO 6 mm² — ABYC 10 AWG</title>
+        </g>
+        <g id="neg-bridge-reserve-house.3" data-from="dist.sw.navcom.term.neg" data-to="dist.ao.house.term.neg">
+          <path class="wire" d="M1440,0A1440,1440 0 0 0 1018,-1018" />
+          <title>neg-bridge-reserve-house.3 — dist.sw.navcom.term.neg → dist.ao.house.term.neg — ISO 6 mm² — ABYC 10 AWG</title>
+        </g>
+      </g>
+      <g id="cable.virtual.mrbf-leads" data-circuit-class="primary" data-core="pos" data-length="0" data-length-policy="omit-virtual-link" data-lmax="0">
+        <g id="cable.mrbf.house" data-from="batt.house.term.pos" data-to="dist.batt.house.term.batt">
+          <line class="wire" x1="1018" x2="1018" y1="1018" y2="538" />
+          <title>cable.mrbf.house — batt.house.term.pos → dist.batt.house.term.batt</title>
+        </g>
+        <g id="cable.mrbf.reserve" data-from="batt.reserve.term.pos" data-to="dist.batt.reserve.term.batt">
+          <line class="wire" x1="-1018" x2="-1018" y1="1018" y2="538" />
+          <title>cable.mrbf.reserve — batt.reserve.term.pos → dist.batt.reserve.term.batt</title>
+        </g>
+      </g>
+    </g>
+    <g id="cable.rf" data-connector="PL-259" data-net="rf">
+      <g id="cable.rf.ais-antenna" data-coax-type="RG-8X" data-from="load.ais.term.rf.out" data-length-policy="display-lmax" data-lmax="[{&quot;basis&quot;:&quot;cg580&quot;,&quot;len&quot;:15}]" data-role="feeder" data-to="antenna.vhf.term.rf">
+        <line class="wire" x1="1357" x2="1696" y1="-1357" y2="-1696" />
+        <title>cable.rf.ais-antenna — load.ais.term.rf.out → antenna.vhf.term.rf</title>
+      </g>
+      <g id="cable.rf.vhf-to-ais" data-from="load.vhf.term.rf" data-length="1" data-length-policy="omit-catalog-length" data-mfr="em-trak" data-pn="B900/S100/S300 VHF Accessory Cable" data-product-url="https://em-trak.com/accessory-b900-s100-s300-vhf-accessory-cable" data-role="jumper" data-sizing-policy="skip" data-to="load.ais.term.rf.in" data-uid="cable.rf.vhf-jumper">
+        <a href="https://em-trak.com/accessory-b900-s100-s300-vhf-accessory-cable">
+          <path class="wire" d="M 1018,-1498 A 184,184 0 0 1 1357,-1357" />
+          <title>cable.rf.vhf-to-ais — load.vhf.term.rf → load.ais.term.rf.in</title>
+        </a>
+      </g>
+    </g>
+  </g>
+  <g id="construction-lines" class="construction">
+    <circle id="cc-0" cx="0" cy="0" r="1440" />
+    <circle id="cc-0-0" cx="0" cy="0" r="480" />
+    <circle id="cc-0-0-0" cx="0" cy="0" r="240" />
+    <circle id="cc-0-1" cx="0" cy="1440" r="480" />
+    <circle id="cc-0-2" cx="1018" cy="1018" r="480" />
+    <circle id="cc-0-3" cx="1440" cy="0" r="480" />
+    <circle id="cc-0-3-0" cx="1440" cy="0" r="240" />
+    <circle id="cc-0-4" cx="1018" cy="-1018" r="480" />
+    <circle id="cc-0-4-0" cx="1018" cy="-1018" r="240" />
+    <circle id="cc-0-4-4" cx="1357" cy="-1357" r="480" />
+    <circle id="cc-0-5" cx="0" cy="-1440" r="480" />
+    <circle id="cc-0-5-0" cx="0" cy="-1440" r="240" />
+    <circle id="cc-0-6" cx="-1018" cy="-1018" r="480" />
+    <circle id="cc-0-6-0" cx="-1018" cy="-1018" r="240" />
+    <circle id="cc-0-7" cx="-1440" cy="0" r="480" />
+    <circle id="cc-0-7-0" cx="-1440" cy="0" r="240" />
+    <circle id="cc-0-8" cx="-1018" cy="1018" r="480" />
+  </g>
+  <g id="node" data-location="cabin:bulkhead:panel">
+    <g id="node-0">
+      <g id="node-0-0" data-default="1 – Battery House" data-entity="switch" data-function="battery-selector" data-mfr="Blue Sea Systems" data-mfr-intermittent-current="500" data-mode-desc="1(House); OFF; 2(Reserve)" data-pn="6008" data-product-url="https://www.bluesea.com/products/6008/m-Series_Selector_3_Position_Battery_Switch_-_Red" data-role="controller" data-selector="1-2-OFF" data-uid="selector.house">
+        <a href="https://www.bluesea.com/products/6008/m-Series_Selector_3_Position_Battery_Switch_-_Red">
+          <circle class="node-bg" cx="0" cy="0" r="160" />
+          <use height="320" href="#ico-batt-switch" transform="translate(-160 -160)" width="320" />
+        </a>
+        <g data-entity="terminal" data-net="dc12.pos">
+          <g id="selector.house.term.1" data-role="input" />
+          <g id="selector.house.term.2" data-role="input" />
+          <g id="selector.house.term.output" data-role="output" />
+        </g>
+        <title>Battery Selector — cabin:bulkhead:panel — UP=1(H);CTR=Off;DN=2(R)</title>
+      </g>
+      <g id="node-0-1" data-combiner-thresholds="engage&gt;=13.4V; disengage&lt;13.2V" data-entity="controller" data-function="voltage-sensing-relay" data-mfr="Victron Energy" data-mfr-i-closed="0.22" data-mfr-i-max="0.3" data-mfr-i-standby="0.004" data-pn="Cyrix-Li-ct 12/24-120" data-product-url="https://www.victronenergy.com/battery-isolators-and-combiners/cyrix-battery-combiners" data-role="controller" data-uid="combiner">
+        <a href="https://www.victronenergy.com/battery-isolators-and-combiners/cyrix-battery-combiners">
+          <circle class="node-bg" cx="0" cy="480" r="160" />
+          <text x="0" y="480">COMBINER</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="combiner.term.30" data-net="dc12.pos" data-role="positive" />
+          <g id="combiner.term.85" data-net="dc12.pos" data-role="control" />
+          <g id="combiner.term.86" data-net="dc12.neg" data-role="negative" />
+          <g id="combiner.term.87" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Battery Combiner Relay — cabin:bulkhead:panel — I 0.3/0.2/–</title>
+      </g>
+    </g>
+    <g id="node-2" data-location="cabin:bulkhead:starboard">
+      <g id="node-2-0" data-capacity="100" data-chemistry="LiFePO₄" data-entity="battery" data-mfr="Victron Energy" data-mfr-i-max="100" data-mfr-vmin="10.0" data-pn="Lithium SuperPack 12,8/100" data-product-url="https://www.victronenergy.com/batteries/12,8v-lithium-superpack" data-role="source" data-uid="batt.house">
+        <a href="https://www.victronenergy.com/batteries/12,8v-lithium-superpack">
+          <circle class="node-bg" cx="1018" cy="1018" r="160" />
+          <text x="1018" y="1018">H</text>
+          <use height="320" href="#ico-battery" transform="translate(858 858)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="batt.house.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="batt.house.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Battery (House) — cabin:bulkhead:starboard — I 100/–/–</title>
+      </g>
+      <g id="node-2-5" data-entity="distribution" data-i-dist-max-1="15.8" data-i-dist-max-2="6.8" data-i-dist-min-1="1" data-i-dist-min-2="0" data-i-dist-typ-1="1.7" data-i-dist-typ-2="0.5" data-mfr="Blue Sea Systems" data-mfr-max-current="300" data-net="dc12.pos" data-ocp-on-post="true" data-pn="5191" data-product-url="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A" data-role="distribution" data-uid="dist.batt.house">
+        <a href="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A">
+          <circle class="node-bg" cx="1018" cy="538" r="160" />
+          <text class="dist-label" x="1018" y="538">MRBF H</text>
+        </a>
+        <g class="fuses" data-entity="fuse" data-mfr="Blue Sea Systems">
+          <g id="fuse.batt.house" data-from="dist.batt.house.term.batt" data-pn="5178" data-product-url="https://www.bluesea.com/products/5178/MRBF_Terminal_Fuse_-_60A" data-rating="60" data-sel-fuse-rationale="combiner surge" data-to="dist.batt.house.term.load" />
+        </g>
+        <g data-entity="terminal">
+          <g id="dist.batt.house.term.batt" data-role="input" />
+          <g id="dist.batt.house.term.load" data-role="output" />
+        </g>
+        <title>MRBF Fuse Block (House) — cabin:bulkhead:starboard — ΣI 22.6/2.2/1</title>
+      </g>
+    </g>
+    <g id="node-3">
+      <g id="node-3-0" data-entity="distribution" data-i-dist-max="6.8" data-i-dist-min="0" data-i-dist-typ="0.5" data-mfr="Blue Sea Systems" data-mfr-max-circuit="30" data-mfr-max-current="100" data-pn="5025" data-product-url="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover" data-role="distribution" data-uid="dist.ao.house">
+        <a href="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover">
+          <circle class="node-bg" cx="1440" cy="0" r="160" />
+          <text class="dist-label" x="1440" y="0">AO H</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="dist.ao.house.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.house.term.neg.bilge" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.house.term.neg.pv-emergency" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.house.term.neg.pv-house" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.house.term.neg.usb" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.house.term.pos" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.house.term.pos.bilge.auto" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.house.term.pos.bilge.manual" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.house.term.pos.pv-emergency" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.house.term.pos.pv-house" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.house.term.pos.usb" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <g id="dist.ao.house.fuses" class="fuses" data-entity="fuse" data-mfr="Blue Sea Systems">
+          <g id="fuse.ao.house.bilge.auto" data-color="Tan" data-landing="dist.ao.house.term.pos.bilge.auto" data-pn="5239" data-product-url="https://www.bluesea.com/products/5239/ATO___ATC_Fuse_-_5_Amp" data-rating="5" data-role="service-disconnect" data-sel-fuse-rationale="Fuse ≥ mfr requirement ∧ Fuse ∈ standard sizes" />
+          <g id="fuse.ao.house.bilge.manual" data-color="Tan" data-landing="dist.ao.house.term.pos.bilge.manual" data-pn="5239" data-product-url="https://www.bluesea.com/products/5239/ATO___ATC_Fuse_-_5_Amp" data-rating="5" data-sel-fuse-rationale="Fuse ≥ mfr requirement ∧ Fuse ∈ standard sizes" />
+          <g id="fuse.ao.house.pv-emergency" data-color="Red" data-landing="dist.ao.house.term.pos.pv-emergency" data-pn="5241" data-product-url="https://www.bluesea.com/products/5241/ATO___ATC_Fuse_-_10_Amp" data-rating="10" data-role="service-disconnect" />
+          <g id="fuse.ao.house.pv-house" data-color="Red" data-landing="dist.ao.house.term.pos.pv-house" data-pn="5241" data-product-url="https://www.bluesea.com/products/5241/ATO___ATC_Fuse_-_10_Amp" data-rating="10" data-role="service-disconnect" />
+          <g id="fuse.ao.house.usb" data-color="Violet" data-landing="dist.ao.house.term.pos.usb" data-pn="5237" data-product-url="https://www.bluesea.com/products/5237/ATO___ATC_Fuse_-_3_Amp" data-rating="3" data-sel-fuse-rationale="Fuse ≥ Iₘₐₓ ∧ Fuse ∈ standard sizes" />
+        </g>
+        <g id="node-3-0-8" data-circuit="manual-override" data-default="Down – No manual override" data-entity="switch" data-function="spst" data-mfr="Blue Sea Systems" data-mfr-max-current="15" data-mode-desc="UP=On;DN=Off" data-optional="true" data-pn="4150" data-product-url="https://www.bluesea.com/products/4150/WeatherDeck_Toggle_Switch_SPST_-_ON-OFF" data-role="controller" data-uid="switch.bilge">
+          <a href="https://www.bluesea.com/products/4150/WeatherDeck_Toggle_Switch_SPST_-_ON-OFF">
+            <circle class="node-bg" cx="1236" cy="127" r="40" />
+            <text x="1236" y="127">B</text>
+          </a>
+          <g data-entity="terminal" data-net="dc12.pos">
+            <g id="switch.bilge.pin-2" />
+            <g id="switch.bilge.pin-3" />
+          </g>
+          <title>Bilge Pump Manual Override Switch — cabin:bulkhead:panel — UP=On;DN=Off</title>
+        </g>
+        <title>Always-on Fuse Block (House) — cabin:bulkhead:panel — ΣI 6.8/0.5/0</title>
+      </g>
+      <g id="node-3-2" data-entity="controller" data-i-max="5.7" data-mfr="Victron Energy" data-mfr-i-max="10" data-mfr-i-standby="0.001" data-pn="SCC075010060R" data-product-url="https://www.victronenergy.com/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20" data-pv-input-fuse="not-required (single panel)" data-role="controller" data-uid="pv.ctrl.house">
+        <a href="https://www.victronenergy.com/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20">
+          <circle class="node-bg" cx="1779" cy="339" r="160" />
+          <text x="1779" y="339">PV CTRL H</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="pv.ctrl.house.term.in.neg" data-net="neg.pv" data-role="input" />
+          <g id="pv.ctrl.house.term.in.pos" data-net="pos.pv" data-role="input" />
+          <g id="pv.ctrl.house.term.out.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="pv.ctrl.house.term.out.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <g id="node-3-2-8" data-entity="pv-panel" data-i-max="3.24" data-location="stern:starboard" data-mfr="SunWare" data-mfr-i-max="3.24" data-pn="SW-40183" data-product-url="https://en.sunware.solar/produkte/solarmodul/197" data-role="source" data-uid="pv.panel.house" data-wp="68">
+          <a href="https://en.sunware.solar/produkte/solarmodul/197">
+            <circle class="node-bg" cx="1498" cy="1018" r="160" />
+            <use height="320" href="#ico-pv-panel" transform="translate(1338 858)" width="320" />
+          </a>
+          <g data-entity="terminal">
+            <g id="pv.panel.house.term.neg" data-net="neg.pv" data-role="negative" />
+            <g id="pv.panel.house.term.pos" data-net="pos.pv" data-role="positive" />
+          </g>
+          <title>Solar Panel (House) — stern:starboard — I 3.2/–/– — Pmax 68</title>
+        </g>
+        <title>Solar Charge Controller (House) — cabin:bulkhead:panel — I 5.7/–/–</title>
+      </g>
+      <g id="node-3-3" data-entity="load" data-i-max="2.5" data-i-typ="0.5" data-mfr="Blue Sea Systems" data-mfr-i-standby="0.001" data-pn="1045" data-product-url="https://www.bluesea.com/products/1045/12_24V_DC_Dual_USB_Charger_4.8A_with_Intelligent_Device_Recognition" data-role="load" data-uid="load.usb.h">
+        <a href="https://www.bluesea.com/products/1045/12_24V_DC_Dual_USB_Charger_4.8A_with_Intelligent_Device_Recognition">
+          <circle class="node-bg" cx="1920" cy="0" r="160" />
+          <use height="320" href="#ico-usb-charger" transform="translate(1760 -160)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.usb.h.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.usb.h.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>USB Charger (House) — cabin:bulkhead:panel — I 2.5/0.5/–</title>
+      </g>
+      <g id="node-3-4" data-entity="controller" data-i-max="5" data-mfr="Victron Energy" data-mfr-i-max="10" data-mfr-i-standby="0.001" data-pn="SCC075010060R" data-product-url="https://www.victronenergy.com/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20" data-pv-input-fuse="not-required (single panel)" data-role="controller" data-uid="pv.ctrl.emergency">
+        <a href="https://www.victronenergy.com/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20">
+          <circle class="node-bg" cx="1779" cy="-339" r="160" />
+          <text x="1779" y="-339">PV CTRL E</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="pv.ctrl.emergency.term.in.neg" data-net="neg.pv" data-role="input" />
+          <g id="pv.ctrl.emergency.term.in.pos" data-net="pos.pv" data-role="input" />
+          <g id="pv.ctrl.emergency.term.out.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="pv.ctrl.emergency.term.out.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <g id="node-3-4-7" data-entity="pv-panel" data-i-max="3.1" data-location="cabin" data-mfr="SunWare" data-mfr-i-max="3.3" data-mfr-i-sc="3.3" data-pn="RX-21052" data-product-url="https://en.sunware.solar/products/solarpanel/45" data-role="source" data-uid="pv.panel.emergency" data-wp="60">
+          <a href="https://en.sunware.solar/products/solarpanel/45">
+            <circle class="node-bg" cx="-339" cy="-339" r="160" />
+            <use height="320" href="#ico-pv-panel" transform="translate(-499 -499)" width="320" />
+          </a>
+          <g data-entity="terminal">
+            <g id="pv.panel.emergency.term.neg" data-net="neg.pv" data-role="negative" />
+            <g id="pv.panel.emergency.term.pos" data-net="pos.pv" data-role="positive" />
+          </g>
+          <title>Solar Panel (Emergency) — cabin — I 3.1/–/– — Pmax 60</title>
+        </g>
+        <title>Solar Charge Controller (Emergency) — cabin:bulkhead:panel — I 5/–/–</title>
+      </g>
+      <g id="node-3-8" data-entity="load" data-gph="1100" data-location="cabin:bulkhead:bilge" data-mfr="Whale" data-mfr-i-max="4.3" data-override="internal-isolation" data-override-mode="manual" data-pn="SS1212" data-product-url="https://docs.navico.com/view/177634415/8" data-role="load" data-switch="auto (integral)" data-uid="load.bilge">
+        <a href="https://docs.navico.com/view/177634415/8">
+          <circle class="node-bg" cx="-1018" cy="1498" r="160" />
+          <use height="320" href="#ico-bilge-pump" transform="translate(-1178 1338)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.bilge.term.auto.pos" data-mode="auto" data-net="dc12.pos" data-role="positive" />
+          <g id="load.bilge.term.manual.pos" data-mode="manual" data-net="dc12.pos" data-role="positive" />
+          <g id="load.bilge.term.neg" data-net="dc12.neg" data-role="negative" />
+        </g>
+        <title>Bilge Pump — cabin:bulkhead:bilge — I 4.3/–/–</title>
+      </g>
+    </g>
+    <g id="node-4">
+      <g id="node-4-0" data-entity="distribution" data-i-dist-max="8.2" data-i-dist-min="0.7" data-i-dist-typ="0.9" data-mfr="Blue Sea Systems" data-mfr-max-circuit="30" data-mfr-max-current="100" data-pn="5025" data-product-url="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover" data-role="distribution" data-uid="dist.sw.navcom">
+        <a href="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover">
+          <circle class="node-bg" cx="1018" cy="-1018" r="160" />
+          <text class="dist-label" x="1018" y="-1018">NAV/COM</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="dist.sw.navcom.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.navcom.term.neg.ais" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.navcom.term.neg.gps" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.navcom.term.neg.n2k" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.navcom.term.neg.rte" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.navcom.term.neg.vhf" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.navcom.term.pos" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.navcom.term.pos.ais" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.navcom.term.pos.gps" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.navcom.term.pos.n2k" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.navcom.term.pos.rte" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.navcom.term.pos.vhf" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <g id="dist.sw.navcom.fuses" class="fuses" data-entity="fuse" data-mfr="Blue Sea Systems">
+          <g id="fuse.sw.navcom.ais" data-color="Violet" data-landing="dist.sw.navcom.term.pos.ais" data-pn="5237" data-product-url="https://www.bluesea.com/products/5237/ATO___ATC_Fuse_-_3_Amp" data-rating="3" data-sel-fuse-rationale="min std &gt; Iₘₐₓ" />
+          <g id="fuse.sw.navcom.gps" data-color="Brown" data-landing="dist.sw.navcom.term.pos.gps" data-pn="5240" data-product-url="https://www.bluesea.com/products/5240/ATO___ATC_Fuse_-_7.5_Amp" data-rating="7.5" data-sel-fuse-rationale="Fuse ≥ mfr requirement ∧ Fuse ∈ standard sizes" />
+          <g id="fuse.sw.navcom.n2k" data-color="Black" data-landing="dist.sw.navcom.term.pos.n2k" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" data-role="service-disconnect" data-sel-fuse-rationale="Fuse ≥ ΣLEN  ∧ Fuse ∈ standard sizes" />
+          <g id="fuse.sw.navcom.rte" data-color="Black" data-landing="dist.sw.navcom.term.pos.rte" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" data-sel-fuse-rationale="Fuse ≥ mfr requirement ∧ Fuse ∈ standard sizes" />
+          <g id="fuse.sw.navcom.vhf" data-color="Red" data-landing="dist.sw.navcom.term.pos.vhf" data-pn="5240" data-product-url="https://www.bluesea.com/products/5240/ATO___ATC_Fuse_-_7.5_Amp" data-rating="7.5" data-sel-fuse-rationale="Fuse ≥ mfr requirement ∧ Fuse ∈ standard sizes" />
+        </g>
+        <g id="node-4-0-4" data-entity="switch" data-function="spst" data-mfr="Blue Sea Systems" data-mfr-max-current="15" data-mode-desc="UP=On;DN=Off" data-pn="4150" data-product-url="https://www.bluesea.com/products/4150/WeatherDeck_Toggle_Switch_SPST_-_ON-OFF" data-role="controller" data-uid="switch.ais">
+          <a href="https://www.bluesea.com/products/4150/WeatherDeck_Toggle_Switch_SPST_-_ON-OFF">
+            <circle class="node-bg" cx="1187" cy="-1187" r="40" />
+            <text x="1187" y="-1187">A</text>
+          </a>
+          <g data-entity="terminal" data-net="dc12.pos">
+            <g id="switch.ais.pin-2" />
+            <g id="switch.ais.pin-3" />
+          </g>
+          <title>AIS Power Switch — cabin:bulkhead:panel — UP=On;DN=Off</title>
+        </g>
+        <title>NAV/COM Fuse Block (switched) — cabin:bulkhead:panel — ΣI 8.2/0.9/0.7</title>
+      </g>
+      <g id="node-4-1" data-entity="load" data-len-n2k="4" data-mfr="Raymarine" data-mfr-i-max="0.2" data-pn="E70148" data-power="n2k-only" data-product-url="https://www.raymarine.com/en-us/our-products/marine-instruments/i50-and-i60-series/i50-depth" data-role="load" data-switch="integral" data-switch-mode="soft" data-uid="load.depth">
+        <a href="https://www.raymarine.com/en-us/our-products/marine-instruments/i50-and-i60-series/i50-depth">
+          <circle class="node-bg" cx="1018" cy="-538" r="160" />
+          <use height="320" href="#ico-depth" transform="translate(858 -698)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.depth.term.n2k" data-net="n2k" data-role="spur" />
+          <g id="load.depth.term.neg" data-net="dc12.neg" data-role="unused" />
+          <g id="load.depth.term.pos" data-net="dc12.pos" data-role="unused" />
+        </g>
+        <title>Depth Instrument — cabin:bulkhead:panel — I 0.2/–/–</title>
+      </g>
+      <g id="node-4-2" data-entity="load" data-len-n2k="1" data-location="cabin:companionway" data-mfr="Raymarine" data-mfr-fuse="7" data-mfr-power="7.34" data-pn="E70634" data-power-typ="5" data-product-url="https://www.raymarine.com/en-us/our-products/Chartplotters/axiom/axiom-plus" data-role="load" data-switch="integral" data-switch-mode="soft" data-uid="load.gps">
+        <a href="https://www.raymarine.com/en-us/our-products/Chartplotters/axiom/axiom-plus">
+          <circle class="node-bg" cx="1357" cy="-679" r="160" />
+          <text x="1357" y="-679">GPS/CP</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="load.gps.term.n2k" data-net="n2k" data-role="spur" />
+          <g id="load.gps.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.gps.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>GPS/CP — cabin:companionway — P 7.3/5/–</title>
+      </g>
+      <g id="node-4-3" data-drops="4" data-entity="network" data-function="nmea2000-hub" data-i-bus-load-max="0.35" data-i-bus-load-min="0.05" data-i-bus-load-typ="0.05" data-mfr="Actisense" data-mfr-i-bus-max="3" data-mfr-i-standby="0" data-n2k-len-sum="7" data-n2k-power="integrated-power-tap; single-tap; others=none" data-pn="A2K-SBN-1" data-power="integrated-power-tap" data-product-url="https://actisense.com/products/a2k-sbn-1" data-terminators="internal" data-topology="self-contained-star" data-uid="load.n2k">
+        <a href="https://actisense.com/products/a2k-sbn-1">
+          <circle class="node-bg" cx="1498" cy="-1018" r="160" />
+          <text x="1498" y="-1018">N2K SBN</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="load.n2k.term.drop.ais" data-net="n2k" data-role="spur" />
+          <g id="load.n2k.term.drop.depth" data-net="n2k" data-role="spur" />
+          <g id="load.n2k.term.drop.gps" data-net="n2k" data-role="spur" />
+          <g id="load.n2k.term.drop.vhf" data-net="n2k" data-role="spur" />
+          <g id="load.n2k.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.n2k.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Self-contained Boat Network — cabin:bulkhead:panel — I 0.4/0.1/0.1</title>
+      </g>
+      <g id="node-4-4" data-entity="load" data-len-n2k="1" data-max-tx-pw="2" data-mfr="em-trak" data-mfr-fuse="3" data-mfr-i-max="2" data-mfr-i-peak="2" data-mfr-i-typ="0.245" data-pn="B923" data-product-url="https://em-trak.com/b900-series" data-rf-failsafe="pass-through" data-role="load" data-uid="load.ais">
+        <a href="https://em-trak.com/b900-series">
+          <circle class="node-bg" cx="1357" cy="-1357" r="160" />
+          <text x="1357" y="-1357">AIS</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="load.ais.term.n2k" data-net="n2k" data-role="spur" />
+          <g id="load.ais.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.ais.term.pos" data-net="dc12.pos" data-role="positive" />
+          <g id="load.ais.term.rf.in" data-net="rf" data-role="antenna-in (splitter)" />
+          <g id="load.ais.term.rf.out" data-net="rf" data-role="antenna-out" />
+        </g>
+        <title>AIS Transceiver — cabin:bulkhead:panel — I 2/0.2/–</title>
+      </g>
+      <g id="node-4-4-4" data-connector="SO-239" data-entity="antenna" data-length="0.91" data-location="mast" data-mfr="Shakespeare" data-pn="5215" data-product-url="https://shakespeare-marine.com/product/classic-vhf-antennas" data-uid="antenna.vhf">
+        <a href="https://shakespeare-marine.com/product/classic-vhf-antennas">
+          <circle class="node-bg" cx="1696" cy="-1696" r="160" />
+          <use height="320" href="#ico-vhf-antenna" transform="translate(1536 -1856)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="antenna.vhf.term.rf" data-net="rf" data-role="antenna" />
+        </g>
+        <title>VHF Antenna — mast</title>
+      </g>
+      <g id="node-4-5" data-entity="load" data-len-n2k="1" data-max-tx-pw="25" data-mfr="Standard Horizon" data-mfr-i-max="5" data-mfr-i-rx="0.9" data-mfr-i-standby="0.55" data-mfr-i-tx="5" data-pn="GX2410GPS" data-product-url="https://standardhorizon.com/product-detail.aspx?Model=GX2410GPS&amp;CatName=Fixed%20Mount%20VHF" data-role="load" data-switch="integral" data-switch-mode="soft" data-uid="load.vhf">
+        <a href="https://standardhorizon.com/product-detail.aspx?Model=GX2410GPS&amp;CatName=Fixed%20Mount%20VHF">
+          <circle class="node-bg" cx="1018" cy="-1498" r="160" />
+          <text x="1018" y="-1498">VHF</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="load.vhf.term.n2k" data-net="n2k" data-role="spur" />
+          <g id="load.vhf.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.vhf.term.pos" data-net="dc12.pos" data-role="positive" />
+          <g id="load.vhf.term.rf" data-net="rf" data-role="antenna-out" />
+        </g>
+        <title>VHF Radio — cabin:bulkhead:panel — I 5/0.9/0.6</title>
+      </g>
+      <g id="node-4-6" data-entity="load" data-mfr="Echomax" data-mfr-i-standby="0.023" data-mfr-i-tx="0.066" data-pn="Active-XS" data-product-url="https://www.echomax.co.uk/active-xs" data-role="load" data-switch="integral" data-uid="load.rte" title="Radar Target Enhancer">
+        <a href="https://www.echomax.co.uk/active-xs">
+          <circle class="node-bg" cx="679" cy="-1357" r="160" />
+          <text x="679" y="-1357">RTE</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="load.rte.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.rte.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Radar Target Enhancer — cabin:bulkhead:panel — I 0.1/–/0</title>
+      </g>
+    </g>
+    <g id="node-5">
+      <g id="node-5-0" data-entity="distribution" data-i-dist-max="0.8" data-i-dist-min="0.3" data-i-dist-typ="0.3" data-mfr="Blue Sea Systems" data-mfr-max-circuit="30" data-mfr-max-current="100" data-pn="5025" data-product-url="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover" data-role="distribution" data-uid="dist.sw.lights">
+        <a href="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover">
+          <circle class="node-bg" cx="0" cy="-1440" r="160" />
+          <text class="dist-label" x="0" y="-1440">LIGHTS</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="dist.sw.lights.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.lights.term.neg.chart" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.lights.term.neg.down" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.lights.term.neg.mast" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.lights.term.neg.side" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.lights.term.neg.stern" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.sw.lights.term.pos" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.lights.term.pos.arw" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.lights.term.pos.chart" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.lights.term.pos.down" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.lights.term.pos.side" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.lights.term.pos.stern" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.sw.lights.term.pos.tri" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <g id="dist.sw.lights.fuses" class="fuses" data-entity="fuse" data-mfr="Blue Sea Systems">
+          <g id="fuse.sw.lights.arw" data-color="Black" data-landing="dist.sw.lights.term.pos.arw" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" />
+          <g id="fuse.sw.lights.chart" data-color="Black" data-landing="dist.sw.lights.term.pos.chart" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" />
+          <g id="fuse.sw.lights.down" data-color="Black" data-landing="dist.sw.lights.term.pos.down" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" />
+          <g id="fuse.sw.lights.side" data-color="Black" data-landing="dist.sw.lights.term.pos.side" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" />
+          <g id="fuse.sw.lights.stern" data-color="Black" data-landing="dist.sw.lights.term.pos.stern" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" />
+          <g id="fuse.sw.lights.tri" data-color="Black" data-landing="dist.sw.lights.term.pos.tri" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" />
+        </g>
+        <g id="switches.navlights" data-entity="switch-group" data-navlights="[{&quot;P_total_W&quot;:3.3,&quot;colregs&quot;:&quot;Rule 25 (sailing vessel) — sidelights + sternlight&quot;,&quot;lights&quot;:[&quot;side&quot;,&quot;stern&quot;],&quot;mode&quot;:&quot;Sail (Deck) - Emergency&quot;,&quot;sw&quot;:{&quot;deck&quot;:&quot;UP&quot;,&quot;mast&quot;:&quot;CTR&quot;}},{&quot;P_total_W&quot;:3.3,&quot;colregs&quot;:&quot;Rule 23 (&lt;12 m) — all-round white + sidelights&quot;,&quot;lights&quot;:[&quot;arw&quot;,&quot;side&quot;],&quot;mode&quot;:&quot;Engine&quot;,&quot;note&quot;:&quot;&lt;12 m: all-round + sidelights&quot;,&quot;sw&quot;:{&quot;deck&quot;:&quot;DOWN&quot;,&quot;mast&quot;:&quot;DOWN&quot;}},{&quot;P_total_W&quot;:1,&quot;colregs&quot;:&quot;Rule 30 — all-round white&quot;,&quot;lights&quot;:[&quot;arw&quot;],&quot;mode&quot;:&quot;Anchor&quot;,&quot;sw&quot;:{&quot;deck&quot;:&quot;CTR&quot;,&quot;mast&quot;:&quot;DOWN&quot;}},{&quot;P_total_W&quot;:1.9,&quot;colregs&quot;:&quot;Rule 25 — tricolor permitted (&lt;20 m)&quot;,&quot;lights&quot;:[&quot;tri&quot;],&quot;mode&quot;:&quot;Sail (Mast)&quot;,&quot;sw&quot;:{&quot;deck&quot;:&quot;CTR&quot;,&quot;mast&quot;:&quot;UP&quot;}},{&quot;P_total_W&quot;:0,&quot;colregs&quot;:&quot;—&quot;,&quot;lights&quot;:[],&quot;mode&quot;:&quot;Off&quot;,&quot;sw&quot;:{&quot;deck&quot;:&quot;CTR&quot;,&quot;mast&quot;:&quot;CTR&quot;}}]">
+          <g id="node-5-0-5" data-entity="switch" data-function="dpdt" data-mfr="Blue Sea Systems" data-mfr-max-current="5" data-mode-desc="UP=TRI;CTR=Off;DN=ARW" data-pn="4155" data-product-url="https://www.bluesea.com/products/4155/WeatherDeck_Toggle_Switch_DPDT_-_ON-OFF-ON" data-role="controller" data-uid="switch.mast">
+            <a href="https://www.bluesea.com/products/4155/WeatherDeck_Toggle_Switch_DPDT_-_ON-OFF-ON">
+              <circle class="node-bg" cx="0" cy="-1680" r="40" />
+              <text x="0" y="-1680">M</text>
+            </a>
+            <g data-entity="terminal" data-net="dc12.pos">
+              <g id="switch.mast.pin-1" />
+              <g id="switch.mast.pin-2" />
+              <g id="switch.mast.pin-5" />
+              <g id="switch.mast.pin-6" />
+            </g>
+            <title>Mast Light Selector — cabin:bulkhead:panel — UP=TRI;CTR=Off;DN=ARW</title>
+          </g>
+          <g id="node-5-0-7" data-bridge="external" data-bridge-rationale="pin4↔pin6" data-bridge-source="dist.sw.lights.term.pos.side" data-entity="switch" data-function="dpdt" data-mfr="Blue Sea Systems" data-mfr-max-current="5" data-mode-desc="UP=Side+Stern;CTR=Off;DN=Side" data-pn="4155" data-product-url="https://www.bluesea.com/products/4155/WeatherDeck_Toggle_Switch_DPDT_-_ON-OFF-ON" data-role="controller" data-uid="switch.deck">
+            <a href="https://www.bluesea.com/products/4155/WeatherDeck_Toggle_Switch_DPDT_-_ON-OFF-ON">
+              <circle class="node-bg" cx="-240" cy="-1440" r="40" />
+              <text x="-240" y="-1440">D</text>
+            </a>
+            <g data-entity="terminal" data-net="dc12.pos">
+              <g id="switch.deck.pin-1" />
+              <g id="switch.deck.pin-2" />
+              <g id="switch.deck.pin-4" />
+              <g id="switch.deck.pin-5" />
+              <g id="switch.deck.pin-6" />
+            </g>
+            <title>Deck Light Selector — cabin:bulkhead:panel — UP=Side+Stern;CTR=Off;DN=Side</title>
+          </g>
+        </g>
+        <title>LIGHTS Fuse Block (switched) — cabin:bulkhead:panel — ΣI 0.8/0.3/0.3</title>
+      </g>
+      <g id="node-5-2" data-entity="load" data-mfr="Hella marine" data-mfr-i-max="0.16" data-mfr-i-min="0.05" data-pn="2JA 343 720-622" data-product-url="https://www.hellamarine.com/shop/interior-exterior-lamps/reading-lamps/flexi-spot-led-chart-table-lamp" data-role="load" data-switch="integral" data-uid="load.chart">
+        <a href="https://www.hellamarine.com/shop/interior-exterior-lamps/reading-lamps/flexi-spot-led-chart-table-lamp">
+          <circle class="node-bg" cx="339" cy="-1101" r="160" />
+          <use height="320" href="#ico-chart-light" transform="translate(179 -1261)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.chart.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.chart.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Chart Table Light — cabin:bulkhead:panel — I 0.2/–/0.1</title>
+      </g>
+      <g id="node-5-4" data-entity="load" data-mfr="Hella marine" data-mfr-i-max="0.33" data-mfr-i-min="0.125" data-pn="2JA 959 950-121" data-product-url="https://www.hellamarine.com/shop/interior-exterior-lamps/downlights/euroled130-surface-mount-round-downlights" data-role="load" data-switch="integral" data-switch-mode="soft" data-uid="load.down">
+        <a href="https://www.hellamarine.com/shop/interior-exterior-lamps/downlights/euroled130-surface-mount-round-downlights">
+          <circle class="node-bg" cx="339" cy="-1779" r="160" />
+          <use height="320" href="#ico-down-light" transform="translate(179 -1939)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.down.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.down.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Cabin Downlight — cabin:bulkhead:panel — I 0.3/–/0.1</title>
+      </g>
+      <g id="node-5-5" data-entity="load" data-location="mast" data-mfr="AquaSignal" data-mfr-power-arw="1" data-mfr-power-max="1.9" data-mfr-power-min="1" data-mfr-power-tricolor="1.9" data-pn="3857001000" data-product-url="https://www.glamox.com/global-marine/products/outdoor/navigation-lights-and-control-panels/3857001000" data-role="load" data-uid="load.mast">
+        <a href="https://www.glamox.com/global-marine/products/outdoor/navigation-lights-and-control-panels/3857001000">
+          <circle class="node-bg" cx="0" cy="-1920" r="160" />
+          <use height="320" href="#ico-masthead" transform="translate(-160 -2080)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.mast.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.mast.term.pos.arw" data-net="dc12.pos" data-role="positive" />
+          <g id="load.mast.term.pos.tri" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Mast Lights (Tricolor / All-round) — mast — P 1.9/–/1</title>
+      </g>
+      <g id="node-5-6" data-entity="load" data-location="bow" data-mfr="AquaSignal" data-mfr-power="2.3" data-pn="3853001000" data-product-url="https://www.glamox.com/global-marine/products/outdoor/navigation-lights-and-control-panels/3853001000" data-role="load" data-uid="load.side">
+        <a href="https://www.glamox.com/global-marine/products/outdoor/navigation-lights-and-control-panels/3853001000">
+          <circle class="node-bg" cx="-339" cy="-1779" r="160" />
+          <use height="320" href="#ico-sidelights" transform="translate(-499 -1939)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.side.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.side.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Sidelights — bow — P 2.3/–/–</title>
+      </g>
+      <g id="node-5-8" data-entity="load" data-location="stern" data-mfr="AquaSignal" data-mfr-power="1" data-pn="3852001000" data-product-url="https://www.glamox.com/global-marine/products/outdoor/navigation-lights-and-control-panels/3852001000" data-role="load" data-uid="load.stern">
+        <a href="https://www.glamox.com/global-marine/products/outdoor/navigation-lights-and-control-panels/3852001000">
+          <circle class="node-bg" cx="-339" cy="-1101" r="160" />
+          <use height="320" href="#ico-sternlight" transform="translate(-499 -1261)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.stern.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.stern.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Sternlight — stern — P 1/–/–</title>
+      </g>
+    </g>
+    <g id="node-6">
+      <g id="node-6-5">
+        <a href="https://www.bluesea.com/products/4155/WeatherDeck_Toggle_Switch_DPDT_-_ON-OFF-ON">
+          <circle class="node-bg" cx="-1018" cy="-1498" r="160" />
+          <title>Switch Pinout “M” Mast Lights — cabin:bulkhead:panel</title>
+          <use height="320" href="#ico-pinout-mast" transform="translate(-1178 -1658)" width="320" />
+        </a>
+      </g>
+      <g id="node-6-7">
+        <a href="https://www.bluesea.com/products/4155/WeatherDeck_Toggle_Switch_DPDT_-_ON-OFF-ON">
+          <circle class="node-bg" cx="-1498" cy="-1018" r="160" />
+          <title>Switch Pinout “D” Deck Lights — cabin:bulkhead:panel</title>
+          <use height="320" href="#ico-pinout-deck" transform="translate(-1658 -1178)" width="320" />
+        </a>
+      </g>
+    </g>
+    <g id="node-7">
+      <g id="node-7-0" data-entity="distribution" data-i-dist-max="12.8" data-i-dist-min="0" data-i-dist-typ="0.5" data-mfr="Blue Sea Systems" data-mfr-max-circuit="30" data-mfr-max-current="100" data-pn="5025" data-product-url="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover" data-role="distribution" data-uid="dist.ao.reserve">
+        <a href="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover">
+          <circle class="node-bg" cx="-1440" cy="0" r="160" />
+          <text class="dist-label" x="-1440" y="0">AO R</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="dist.ao.reserve.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.reserve.term.neg.pv-reserve" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.reserve.term.neg.socket" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.reserve.term.neg.tiller" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.reserve.term.neg.usb" data-net="dc12.neg" data-role="negative" />
+          <g id="dist.ao.reserve.term.pos" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.reserve.term.pos.combiner" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.reserve.term.pos.pv-reserve" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.reserve.term.pos.socket" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.reserve.term.pos.tiller" data-net="dc12.pos" data-role="positive" />
+          <g id="dist.ao.reserve.term.pos.usb" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <g id="dist.ao.reserve.fuses" class="fuses" data-entity="fuse" data-mfr="Blue Sea Systems">
+          <g id="fuse.ao.reserve.combiner" data-color="Black" data-landing="dist.ao.reserve.term.pos.combiner" data-pn="5235" data-product-url="https://www.bluesea.com/products/5235/ATO___ATC_Fuse_-_1_Amp" data-rating="1" data-role="service-disconnect" />
+          <g id="fuse.ao.reserve.pv" data-color="Red" data-landing="dist.ao.reserve.term.pos.pv-reserve" data-pn="5241" data-product-url="https://www.bluesea.com/products/5241/ATO___ATC_Fuse_-_10_Amp" data-rating="10" data-role="service-disconnect" />
+          <g id="fuse.ao.reserve.socket" data-color="Tan" data-landing="dist.ao.reserve.term.pos.socket" data-pn="5239" data-product-url="https://www.bluesea.com/products/5239/ATO___ATC_Fuse_-_5_Amp" data-rating="5" />
+          <g id="fuse.ao.reserve.tiller" data-color="Red" data-landing="dist.ao.reserve.term.pos.tiller" data-pn="5241" data-product-url="https://www.bluesea.com/products/5241/ATO___ATC_Fuse_-_10_Amp" data-rating="10" data-role="load" data-sel-fuse-rationale="Fuse ≥ mfr requirement ∧ Fuse ∈ standard sizes" />
+          <g id="fuse.ao.reserve.usb" data-color="Violet" data-landing="dist.ao.reserve.term.pos.usb" data-pn="5237" data-product-url="https://www.bluesea.com/products/5237/ATO___ATC_Fuse_-_3_Amp" data-rating="3" data-sel-fuse-rationale="Fuse ≥ Iₘₐₓ ∧ Fuse ∈ standard sizes" />
+        </g>
+        <title>Always-on Fuse Block (Reserve) — cabin:bulkhead:panel — ΣI 12.8/0.5/0</title>
+      </g>
+      <g id="node-7-2" data-entity="load" data-i-max="5" data-i-min="0.05" data-i-typ="2.0" data-location="cockpit" data-mfr="Raymarine" data-mfr-fuse="10" data-mfr-i-auto-max="1.5" data-mfr-i-auto-min="0.5" data-mfr-i-standby="0.04" data-mfr-i-standby-lit="0.09" data-pn="A12004" data-product-url="https://www.raymarine.com/en-us/our-products/boat-autopilots/autopilot-packs/st1000-st2000" data-role="load" data-uid="load.tiller">
+        <a href="https://www.raymarine.com/en-us/our-products/boat-autopilots/autopilot-packs/st1000-st2000">
+          <circle class="node-bg" cx="1018" cy="1498" r="160" />
+          <text x="1018" y="1498">TILLER</text>
+        </a>
+        <g data-entity="connector" data-location="cockpit" data-mfr="Raymarine" data-pn="D338" data-power="Battery Reserve only; selector-independent" data-role="connector">
+          <g data-entity="terminal">
+            <g id="socket.tiller.term.pin1" data-net="dc12.pos" data-role="positive" />
+            <g id="socket.tiller.term.pin2" data-net="dc12.neg" data-role="negative" />
+          </g>
+        </g>
+        <title>Tiller Pilot (Reserve) — cockpit — I 5/2/0.1</title>
+      </g>
+      <g id="node-7-7" data-entity="load" data-i-max="2.5" data-i-typ="0.5" data-mfr="Blue Sea Systems" data-mfr-i-standby="0.001" data-optional="true" data-pn="1045" data-product-url="https://www.bluesea.com/products/1045/12_24V_DC_Dual_USB_Charger_4.8A_with_Intelligent_Device_Recognition" data-role="load" data-uid="load.usb.r">
+        <a href="https://www.bluesea.com/products/1045/12_24V_DC_Dual_USB_Charger_4.8A_with_Intelligent_Device_Recognition">
+          <circle class="node-bg" cx="-1920" cy="0" r="160" />
+          <use height="320" href="#ico-usb-charger" transform="translate(-2080 -160)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="load.usb.r.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="load.usb.r.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>USB Charger (Reserve) — cabin:bulkhead:panel — I 2.5/0.5/–</title>
+      </g>
+      <g id="node-7-8" data-entity="controller" data-i-max="5.7" data-mfr="Victron Energy" data-mfr-i-max="10" data-mfr-i-standby="0.001" data-pn="SCC075010060R" data-product-url="https://www.victronenergy.com/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20" data-pv-input-fuse="not-required (single panel)" data-role="controller" data-uid="pv.ctrl.reserve">
+        <a href="https://www.victronenergy.com/solar-charge-controllers/smartsolar-mppt-75-10-75-15-100-15-100-20">
+          <circle class="node-bg" cx="-1779" cy="339" r="160" />
+          <text x="-1779" y="339">PV CTRL R</text>
+        </a>
+        <g data-entity="terminal">
+          <g id="pv.ctrl.reserve.term.in.neg" data-net="neg.pv" data-role="input" />
+          <g id="pv.ctrl.reserve.term.in.pos" data-net="pos.pv" data-role="input" />
+          <g id="pv.ctrl.reserve.term.out.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="pv.ctrl.reserve.term.out.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <g id="node-7-8-8" data-entity="pv-panel" data-i-max="3.24" data-location="stern:port" data-mfr="SunWare" data-mfr-i-max="3.24" data-pn="SW-40183" data-product-url="https://en.sunware.solar/produkte/solarmodul/197" data-role="source" data-uid="pv.panel.reserve" data-wp="68">
+          <a href="https://en.sunware.solar/produkte/solarmodul/197">
+            <circle class="node-bg" cx="-1498" cy="1018" r="160" />
+            <use height="320" href="#ico-pv-panel" transform="translate(-1658 858)" width="320" />
+          </a>
+          <g data-entity="terminal">
+            <g id="pv.panel.reserve.term.neg" data-net="neg.pv" data-role="negative" />
+            <g id="pv.panel.reserve.term.pos" data-net="pos.pv" data-role="positive" />
+          </g>
+          <title>Solar Panel (Reserve) — stern:port — I 3.2/–/– — Pmax 68</title>
+        </g>
+        <title>Solar Charge Controller (Reserve) — cabin:bulkhead:panel — I 5.7/–/–</title>
+      </g>
+      <g id="socket.12v.reserve" data-entity="connector" data-i-max="5" data-mfr="Blue Sea Systems" data-optional="true" data-pn="1011" data-product-url="https://www.bluesea.com/products/1011/Dash_Socket_12V_DC_with_Watertight_Cap" data-uid="socket.12v.reserve">
+        <a href="https://www.bluesea.com/products/1011/Dash_Socket_12V_DC_with_Watertight_Cap">
+          <circle class="node-bg" cx="-1779" cy="-339" r="160" />
+          <use height="320" href="#ico-12v-dc-socket" transform="translate(-1939 -499)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="socket.12v.reserve.term.neg" data-net="dc12.neg" />
+          <g id="socket.12v.reserve.term.pos" data-net="dc12.pos" />
+        </g>
+        <title>12 V Socket (Reserve) — cabin:bulkhead:panel — I 5/–/–</title>
+      </g>
+    </g>
+    <g id="node-8" data-location="cabin:bulkhead:port">
+      <g id="node-8-0" data-capacity="100" data-chemistry="LiFePO₄" data-entity="battery" data-mfr="Victron Energy" data-mfr-i-max="100" data-mfr-vmin="10.0" data-pn="Lithium SuperPack 12,8/100" data-product-url="https://www.victronenergy.com/batteries/12,8v-lithium-superpack" data-purpose="dedicated tiller pilot supply" data-role="source" data-uid="batt.reserve">
+        <a href="https://www.victronenergy.com/batteries/12,8v-lithium-superpack">
+          <circle class="node-bg" cx="-1018" cy="1018" r="160" />
+          <text x="-1018" y="1018">R</text>
+          <use height="320" href="#ico-battery" transform="translate(-1178 858)" width="320" />
+        </a>
+        <g data-entity="terminal">
+          <g id="batt.reserve.term.neg" data-net="dc12.neg" data-role="negative" />
+          <g id="batt.reserve.term.pos" data-net="dc12.pos" data-role="positive" />
+        </g>
+        <title>Battery (Reserve) — cabin:bulkhead:port — I 100/–/–</title>
+      </g>
+      <g id="node-8-5" data-entity="distribution" data-i-dist-max-1="12.8" data-i-dist-max-2="21.8" data-i-dist-min-1="0" data-i-dist-min-2="1" data-i-dist-typ-1="0.5" data-i-dist-typ-2="1.7" data-mfr="Blue Sea Systems" data-mfr-max-current="300" data-net="dc12.pos" data-ocp-on-post="true" data-pn="5191" data-product-url="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A" data-role="distribution" data-uid="dist.batt.reserve">
+        <a href="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A">
+          <circle class="node-bg" cx="-1018" cy="538" r="160" />
+          <text class="dist-label" x="-1018" y="538">MRBF R</text>
+        </a>
+        <g class="fuses" data-entity="fuse" data-mfr="Blue Sea Systems">
+          <g id="fuse.batt.reserve" data-from="dist.batt.reserve.term.batt" data-pn="5178" data-product-url="https://www.bluesea.com/products/5178/MRBF_Terminal_Fuse_-_60A" data-rating="60" data-sel-fuse-rationale="combiner surge" data-to="dist.batt.reserve.term.load" />
+        </g>
+        <g data-entity="terminal">
+          <g id="dist.batt.reserve.term.batt" data-role="input" />
+          <g id="dist.batt.reserve.term.load" data-role="output" />
+        </g>
+        <title>MRBF Fuse Block (Reserve) — cabin:bulkhead:port — ΣI 34.6/2.2/1</title>
+      </g>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:date>2025-10-13</dc:date>
+        <cc:attributionName>Olaf Koepke</cc:attributionName>
+        <cc:attributionURL rdf:resource="mailto:o.koepke@gmx.de" />
+        <dc:coverage>Small craft 12 V DC systems</dc:coverage>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Olaf Koepke</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Machine-readable, standards-compliant 12 V DC electrical schematic for a small yacht (e.g., a Globe 5.80). Includes fully documented sources, protective devices, conductor sizing and length limits, switching, NMEA 2000 networking (N2K), solar charging, navigation/communications, lighting, and bilge circuits. Structured with consistent identifiers and metadata to support AI interpretation, automation, and validation under ABYC E-11 and ISO 13297.</dc:description>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:identifier>mailto:o.koepke@gmx.de</dc:identifier>
+        <dc:language>en-US</dc:language>
+        <cc:license rdf:resource="https://opensource.org/licenses/MIT" />
+        <dc:relation rdf:resource="https://classglobe580.com" />
+        <dc:relation rdf:resource="https://classglobe580.com/class-rules" />
+        <dc:relation rdf:resource="https://globe580forum.proboards.com/thread/105/wiring-diagram-80-perfect-pete" />
+        <dc:relation rdf:resource="https://smallcraftadvisor.substack.com/p/quick-tip-minimalist-electrical-system" />
+        <dc:relation rdf:resource="https://www.pbo.co.uk/expert-advice/a-beginners-guide-to-managing-marine-battery-power-97630" />
+        <dc:relation rdf:resource="https://www.pbo.co.uk/expert-advice/boat-wiring-explained-for-the-practical-sailor-82502" />
+        <dc:relation rdf:resource="https://www.pbo.co.uk/expert-advice/lithium-iron-phosphate-batteries-myths-busted-86812" />
+        <dc:relation rdf:resource="https://www.pbo.co.uk/expert-advice/understanding-boat-electrics-switches-and-relays-78213" />
+        <dc:relation rdf:resource="https://www.pbo.co.uk/expert-advice/understanding-electrical-wiring-connections-for-boats-78925" />
+        <dc:relation rdf:resource="https://www.sailing.org/inside-the-sport/offshore/special-regulations" />
+        <dc:relation rdf:resource="https://www.youtube.com/@WaarschipVerstarker" />
+        <dc:rights>© 2025 Olaf Koepke — MIT License. Provided “as is” for general information and not as professional advice or certification. Verify against current ABYC/ISO standards and manufacturer documentation before use. No warranties are expressed or implied; the author is not liable for loss, damage, injury, or noncompliance.</dc:rights>
+        <dc:source>https://northcardinal.co.uk/wp-content/uploads/2021/02/wiring-diagram-v4.png</dc:source>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>12V</rdf:li>
+            <rdf:li>ABYC E-11</rdf:li>
+            <rdf:li>Boat wiring</rdf:li>
+            <rdf:li>Class Globe 5.80</rdf:li>
+            <rdf:li>DC</rdf:li>
+            <rdf:li>Functional diagram</rdf:li>
+            <rdf:li>ISO 13297</rdf:li>
+            <rdf:li>Marine electrical</rdf:li>
+            <rdf:li>Small craft</rdf:li>
+            <rdf:li>Wiring diagram</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:title>AI-ready 12 V DC wiring layout for a small yacht (Globe 5.80 example)</dc:title>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+    <ai-governance>
+      <accessibility noAria="true" suggestions="off" />
+      <compliance refs="ABYC A-16,ABYC E-11,ClassGlobe 580 Class Rules,COLREGs,EN ISO 10133,EN ISO 13297,Offshore Special Regulations" />
+      <dist-i dist="dist.batt.house,dist.batt.reserve" dists="reachable; via=+" i_max="coalesce(data-mfr-i-tx,data-mfr-i-peak,data-mfr-i-max,data-i-max,max(data-mfr-power-max,data-power-max,data-mfr-power,data-power)/v_nom)" i_min="coalesce(i_min_base,i_typ_base)" i_min_base="coalesce(data-i-min,data-mfr-i-standby,min(data-power-min,data-mfr-power-min,data-power-typ,data-mfr-power-typ,data-mfr-power,data-power)/v_nom)" i_typ="coalesce(i_typ_base,i_min_base)" i_typ_base="coalesce(data-i-typ,data-mfr-i-typ,coalesce(data-power-typ,data-mfr-power-typ,data-mfr-power,data-power)/v_nom,data-mfr-i-standby)" max="Σ i_max(on)" min="Σ i_min(exclude=load.bilge,load.depth,load.gps,load.tiller; include=load.chart,load.down; nav='arw')" modes="switches.navlights" nav_min="arw" nav_typ="tri" precision="1" typ="Σ i_typ(exclude=load.bilge,load.depth,load.gps,load.tiller; include=load.chart,load.down; nav='tri')" v_nom="12" />
+      <geometry idx="0=center;1=S;2=SE;3=E;4=NE;5=N;6=NW;7=W;8=SW" rings="inner=240;main=1440;ring=480" />
+      <inherit attrs="data-*" export="materialize" rule="nearest-ancestor" />
+      <lengths kebab-case="enforce" lmax="one-way length" policy-values="display-lmax|lte-lmax|omit-captive|omit-catalog-length|omit-minor-load|omit-panel-short|omit-virtual-link|verify-only" />
+      <linguistic lang="en-US" style="ABYC E-11" terms="ABYC E-11; EN ISO 13297" />
+      <policy noAssumptions="true" proposalsOnly="true" requireNumberedProposals="true" />
+      <rules out="sort-elements:alpha;sort-attrs:alpha;id-first" size="abyc:data-size-abyc;iso:data-size-iso;basis:fuse|mfr|vdrop" style="tech-terse" words="titles short,functional" />
+      <sizes allow-conversion="false" authorities="ABYC E-11 Table IV-A|EN ISO 13297 Annex A" coupling="independent" prefer-source="true" require-authority-tag="true" />
+      <switches allowInline="false" ctrForTwo="false" source="attributes" three="UP={up};CTR={ctr};DN={down}" threeExemptFn="battery-selector" two="UP={on};DN={off}" />
+      <terminology map="combined lantern=tricolor" quote="true" />
+      <titles cable-format="{id} — {from} → {to}{ — ISO {mm2} mm²}{ — ABYC {awg}}{ — Lmax ISO {m.iso} m / ABYC {m.abyc} m / MFR {m.mfr} m}{; fuse.{fuseid}}" node-format="{name}{ — {location}}{?any(i.max,i.typ,i.min): — I {i.max}/{i.typ}/{i.min}}{?any(i.dist.max,i.dist.typ,i.dist.min): — ΣI {i.dist.max}/{i.dist.typ}/{i.dist.min}}{?wp: — Pmax {wp}}{?all(!any(i.max,i.typ,i.min),any(mfr-power-max,power-max,mfr-power,power,mfr-power-typ,power-typ,mfr-power-min,power-min)): — P {mfr-power-max|power-max|mfr-power|power}/{mfr-power-typ|power-typ|–}/{mfr-power-min|power-min|–}}" node-missing="–" node-numbers="1dp;trim0" node-prefer="tx,rx|i.max,i.typ,i.min|mfr-power-max,power-max,mfr-power,power|mfr-power-typ,power-typ|mfr-power-min,power-min|wp" node-switch-format="{name}{ — {location}} — {mode-desc}" />
+    </ai-governance>
+    <design-goals items="minimize cabling; minimize components; prefer device-integrated switching; minimize user operation; ensure standards compliance" />
+  </metadata>
+  <style>#node text{dominant-baseline:middle;fill:white;font-family:system-ui,sans-serif;font-size:55px;font-weight:bold;text-anchor:middle}.dist-label{text-decoration:underline}.construction{display:none;fill:none;stroke:gray;stroke-dasharray:8 8}.node-bg{fill:url(#paint-node-3d);filter:url(#fx-shadow-deep)}.wire{fill:none;stroke-linecap:round;stroke-width:15}[data-core="neg"] .wire{stroke:black}[data-core="pos"] .wire{stroke:red}[data-net="n2k"] .wire{stroke:violet}[data-net="rf"] .wire{stroke:green}</style>
+  <title>AI-ready 12 V DC wiring layout — Small yacht (Globe 5.80 example)</title>
+  <defs>
+    <filter id="fx-shadow-deep" height="170%" width="170%" x="-35%" y="-35%">
+      <feDropShadow dx="0" dy="0" flood-color="#FF5F15" flood-opacity="0.08" stdDeviation="12" />
+      <feDropShadow dx="0" dy="6" flood-opacity="0.40" stdDeviation="7" />
+    </filter>
+    <filter id="fx-shadow-soft" height="160%" width="160%" x="-30%" y="-30%">
+      <feDropShadow dx="0" dy="0" flood-color="#FF5F15" flood-opacity="0.06" stdDeviation="8" />
+      <feDropShadow dx="0" dy="2" flood-opacity="0.30" stdDeviation="3" />
+    </filter>
+    <linearGradient id="paint-gloss-green" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="honeydew" />
+      <stop offset="28%" stop-color="mediumseagreen" />
+      <stop offset="58%" stop-color="seagreen" />
+      <stop offset="100%" stop-color="darkgreen" />
+    </linearGradient>
+    <linearGradient id="paint-gloss-red" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="mistyrose" />
+      <stop offset="28%" stop-color="tomato" />
+      <stop offset="58%" stop-color="crimson" />
+      <stop offset="100%" stop-color="darkred" />
+    </linearGradient>
+    <linearGradient id="paint-gloss-warmwhite" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="cornsilk" />
+      <stop offset="45%" stop-color="gold" />
+      <stop offset="100%" stop-color="goldenrod" />
+    </linearGradient>
+    <linearGradient id="paint-gloss-white" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="45%" stop-color="whitesmoke" />
+      <stop offset="100%" stop-color="gainsboro" />
+    </linearGradient>
+    <mask id="mask-inset-10">
+      <rect fill="url(#paint-mask-inset-10)" height="1" width="1" x="0" y="0" />
+    </mask>
+    <radialGradient id="paint-mask-inset-10" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="100%" stop-color="black" />
+    </radialGradient>
+    <radialGradient id="paint-node-3d" cx="30%" cy="28%" r="85%">
+      <stop offset="0%" stop-color="lightsalmon" />
+      <stop offset="45%" stop-color="#FF5F15" />
+      <stop offset="78%" stop-color="orangered" />
+      <stop offset="100%" stop-color="saddlebrown" />
+    </radialGradient>
+    <radialGradient id="paint-specular" cx="28%" cy="22%" r="32%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.35" />
+      <stop offset="55%" stop-color="white" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </radialGradient>
+    <symbol id="ico-12v-dc-socket" viewBox="-160 -160 320 320">
+      <circle fill="none" r="120" stroke="white" stroke-width="20" />
+      <circle fill="white" r="30" />
+    </symbol>
+    <symbol id="ico-allround" viewBox="-160 -160 320 320">
+      <circle fill="url(#paint-gloss-white)" r="150" />
+      <use href="#ico-disc-base" />
+    </symbol>
+    <symbol id="ico-batt-switch" viewBox="-160 -160 320 320">
+      <circle fill="url(#paint-gloss-red)" r="140" />
+      <circle fill="url(#paint-gloss-red)" r="85" />
+      <g dominant-baseline="middle" fill="white" font-family="system-ui, sans-serif" font-size="55" font-weight="bold" text-anchor="middle">
+        <text x="-112" y="0">2</text>
+        <text x="0" y="-104">OFF</text>
+        <text x="112" y="0">1</text>
+      </g>
+      <path d="M0 -85 A100 100 0 0 0 0 85 A100 100 0 0 0 0 -85 Z" fill="url(#paint-gloss-red)" stroke="black" stroke-opacity=".22" stroke-width="2" />
+    </symbol>
+    <symbol id="ico-battery" viewBox="-160 -160 320 320">
+      <g dominant-baseline="middle" fill="white" font-family="system-ui, sans-serif" font-size="38" font-weight="700" text-anchor="middle">
+        <text x="-60" y="-10">-</text>
+        <text x="60" y="-10">+</text>
+      </g>
+      <g fill="none" stroke="white" stroke-width="3">
+        <circle cx="-60" cy="-10" r="22" />
+        <circle cx="60" cy="-10" r="22" />
+      </g>
+      <rect fill="none" height="120" rx="20" stroke="white" stroke-width="20" width="200" x="-100" y="-60" />
+      <rect fill="white" height="30" rx="6" width="50" x="-90" y="-90" />
+      <rect fill="white" height="30" rx="6" width="50" x="40" y="-90" />
+    </symbol>
+    <symbol id="ico-bilge-pump" viewBox="-160 -160 320 320">
+      <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="5">
+        <path d="M-90 18 q 10 -5 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0 t 20 0" />
+        <path d="M0 -18 H90" />
+        <path d="M0 -18 V18" />
+        <polygon fill="white" points="90,-33 113,-18 90,-3" />
+      </g>
+      <path id="hull-half--ico-bilge" d="M0 -68 L110 -68 L125 -35 L115 28 L55 68 L0 68" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+      <use href="#hull-half--ico-bilge" />
+      <use href="#hull-half--ico-bilge" transform="scale(-1 1)" />
+    </symbol>
+    <symbol id="ico-chart-light" viewBox="-160 -160 320 320">
+      <g filter="url(#fx-shadow-soft)" transform="rotate(45)">
+        <circle fill="url(#paint-specular)" mask="url(#mask-inset-10)" r="96" />
+        <path d="M-40 35 V55 M-20 35 V55 M0 35 V55 M20 35 V55 M40 35 V55" fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+        <path d="M-80 25 H80 A80 80 0 0 0 -80 25 Z" fill="url(#paint-gloss-warmwhite)" />
+      </g>
+    </symbol>
+    <symbol id="ico-depth" viewBox="-160 -160 320 320">
+      <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+        <circle cx="0" cy="-100" fill="white" r="10" stroke="white" />
+        <g id="waves">
+          <path d="M-11 -59 A42 42 0 0 0 11 -59" />
+          <path d="M-22 -19 A84 84 0 0 0 22 -19" />
+          <path d="M-33 22 A126 126 0 0 0 33 22" />
+          <path d="M-43 62 A168 168 0 0 0 43 62" />
+          <path d="M-54 103 A210 210 0 0 0 54 103" />
+        </g>
+      </g>
+    </symbol>
+    <symbol id="ico-disc-base" viewBox="-160 -160 320 320">
+      <g filter="url(#fx-shadow-soft)">
+        <circle fill="url(#paint-specular)" mask="url(#mask-inset-10)" r="118" />
+      </g>
+    </symbol>
+    <symbol id="ico-down-light" viewBox="-160 -160 320 320">
+      <g filter="url(#fx-shadow-soft)">
+        <circle cx="0" cy="-40" fill="url(#paint-specular)" mask="url(#mask-inset-10)" r="86" />
+        <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+          <path d="M-45 38 L -55 55" />
+          <path d="M-78 5 L -95 15" />
+          <path d="M0 50 L 0 70" />
+          <path d="M45 38 L 55 55" />
+          <path d="M78 5 L 95 15" />
+        </g>
+        <path d="M80 -40 A80 80 0 0 1 -80 -40 Z" fill="url(#paint-gloss-warmwhite)" />
+      </g>
+    </symbol>
+    <symbol id="ico-masthead" viewBox="-160 -160 320 320">
+      <use height="320" href="#ico-allround" transform="translate(-160 -160)" width="320" />
+      <use height="320" href="#ico-tricolor" transform="translate(-160 -160)" width="320" />
+    </symbol>
+    <symbol id="ico-pinout" viewBox="-160 -160 320 320">
+      <g fill="black" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">
+        <text x="-28" y="-58">1</text>
+        <text x="-28" y="4">2</text>
+        <text x="-28" y="65">3</text>
+        <text x="28" y="-58">4</text>
+        <text x="28" y="4">5</text>
+        <text x="28" y="65">6</text>
+      </g>
+      <g fill="none" stroke="black" stroke-width="2">
+        <circle id="outer-left" cx="-98" cy="0" r="30" />
+        <circle id="outer-right" cx="98" cy="0" r="30" />
+        <rect id="pinframe" height="140" rx="12" width="120" x="-60" y="-70" />
+      </g>
+      <g fill="none" stroke="black" stroke-width="3">
+        <rect id="pin-1-tab" height="5" transform="rotate(-20 -28 -48)" width="35" x="-45" y="-50" />
+        <rect id="pin-2-tab" height="40" width="5" x="-49" y="-20" />
+        <rect id="pin-3-tab" height="5" transform="rotate(20 -28 48)" width="35" x="-45" y="45" />
+        <rect id="pin-4-tab" height="5" transform="rotate(20 28 -48)" width="35" x="10" y="-50" />
+        <rect id="pin-5-tab" height="40" width="5" x="44" y="-20" />
+        <rect id="pin-6-tab" height="5" transform="rotate(-20 28 48)" width="35" x="10" y="45" />
+      </g>
+      <g fill="none" stroke="red" stroke-width="4">
+        <circle id="ext-bottom" cx="0" cy="98" r="20" />
+        <circle id="ext-top" cx="0" cy="-98" r="20" />
+        <circle id="pin-1" cx="-28" cy="-48" r="22" />
+        <circle id="pin-6" cx="28" cy="48" r="22" />
+        <line id="wire-bottom" x1="8" x2="0" y1="48" y2="78" />
+        <line id="wire-left" x1="-47" x2="-68" y1="0" y2="0" />
+        <line id="wire-right" x1="47" x2="68" y1="0" y2="0" />
+        <line id="wire-top" x1="-8" x2="0" y1="-48" y2="-78" />
+      </g>
+    </symbol>
+    <symbol id="ico-pinout-bridged" viewBox="-160 -160 320 320">
+      <g fill="none" stroke="red" stroke-width="4">
+        <circle id="pin-4" cx="28" cy="-48" r="22" />
+        <line id="wire-bridge-4-3" x1="8" x2="0" y1="-48" y2="78" />
+      </g>
+      <use height="320" href="#ico-pinout" transform="translate(-160 -160)" width="320" />
+    </symbol>
+    <symbol id="ico-pinout-deck" viewBox="-160 -160 320 320">
+      <use height="320" href="#ico-pinout-bridged" transform="translate(-160 -160)" width="320" />
+      <use height="60" href="#ico-sidelights" transform="translate(68 -30)" width="60" />
+      <use height="60" href="#ico-sternlight" transform="translate(-128 -30)" width="60" />
+    </symbol>
+    <symbol id="ico-pinout-mast" viewBox="-160 -160 320 320">
+      <use height="320" href="#ico-pinout" transform="translate(-160 -160)" width="320" />
+      <use height="60" href="#ico-allround" transform="translate(68 -30)" width="60" />
+      <use height="60" href="#ico-tricolor" transform="translate(-128 -30)" width="60" />
+    </symbol>
+    <symbol id="ico-pv-panel" viewBox="-160 -160 320 320">
+      <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+        <line x1="-100" x2="100" y1="-20" y2="-20" />
+        <line x1="-100" x2="100" y1="-60" y2="-60" />
+        <line x1="-100" x2="100" y1="20" y2="20" />
+        <line x1="-100" x2="100" y1="60" y2="60" />
+        <line x1="-20" x2="-20" y1="-100" y2="100" />
+        <line x1="-60" x2="-60" y1="-100" y2="100" />
+        <line x1="20" x2="20" y1="-100" y2="100" />
+        <line x1="60" x2="60" y1="-100" y2="100" />
+        <rect height="200" rx="12" width="200" x="-100" y="-100" />
+      </g>
+    </symbol>
+    <symbol id="ico-sidelights" viewBox="-160 -160 320 320">
+      <path d="M0 0 L-120 50 A130 130 0 0 1 0 -130 Z" fill="url(#paint-gloss-red)" />
+      <path d="M0 0 L0 -130 A130 130 0 0 1 120 50 Z" fill="url(#paint-gloss-green)" />
+      <use href="#ico-disc-base" />
+    </symbol>
+    <symbol id="ico-sternlight" viewBox="-160 -160 320 320">
+      <path d="M0 0 L120 50 A130 130 0 0 1 -120 50 Z" fill="url(#paint-gloss-white)" />
+      <use href="#ico-disc-base" />
+    </symbol>
+    <symbol id="ico-tricolor" viewBox="-160 -160 320 320">
+      <circle fill="none" opacity="0.9" r="130" stroke="black" stroke-width="3" />
+      <use height="320" href="#ico-sidelights" transform="translate(-160 -160)" width="320" />
+      <use height="320" href="#ico-sternlight" transform="translate(-160 -160)" width="320" />
+    </symbol>
+    <symbol id="ico-usb-charger" viewBox="-160 -160 320 320">
+      <g fill="none" stroke="white" stroke-width="20">
+        <rect height="40" rx="20" width="200" x="-100" y="-60" />
+        <rect height="40" rx="20" width="200" x="-100" y="20" />
+      </g>
+    </symbol>
+    <symbol id="ico-vhf-antenna" viewBox="-160 -160 320 320">
+      <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+        <circle cx="0" cy="0" fill="white" r="10" stroke="white" />
+        <g id="vhf-waves">
+          <path d="M-28 -28 A42 42 0 0 0 -28 28" />
+          <path d="M-56 -56 A84 84 0 0 0 -56 56" />
+          <path d="M-84 -84 A126 126 0 0 0 -84 84" />
+        </g>
+        <line x1="0" x2="0" y1="0" y2="130" />
+        <use href="#vhf-waves" transform="scale(-1 1)" />
+      </g>
+    </symbol>
+  </defs>
+</svg>
