@@ -164,13 +164,13 @@ ChatGPT will read wire sizes, fuse ratings, switch logic, voltage-drop limits, a
 
 ## ⚓ Sailor-Style (Fun) Prompts
 
-> Would **Don McIntyre** be impressed if he toured my 5.80?
-> What might **Nigel Calder** think of this electrical layout?
-> Explain my wiring like you’re talking to a shipwright over a beer in Les Sables d’Olonne.
-> Translate this setup into the language of an old-school electrician who hates computers.
-> Make a fun checklist to explain this system during a boat tour.
-> Pretend you’re a surveyor inspecting my 5.80 before launch — what would you praise, and what would you question?
-> What’s elegant about this system from a designer’s view?
+> Would **Don McIntyre** be impressed if he toured my 5.80?  
+> What might **Nigel Calder** think of this electrical layout?  
+> Explain my wiring like you’re talking to a shipwright over a beer in Les Sables d’Olonne.  
+> Translate this setup into the language of an old-school electrician who hates computers.  
+> Make a fun checklist to explain this system during a boat tour.  
+> Pretend you’re a surveyor inspecting my 5.80 before launch — what would you praise, and what would you question?  
+> What’s elegant about this system from a designer’s view?  
 > How would you describe this to a kid who wants to circumnavigate one day?
 
 ---
