@@ -520,7 +520,7 @@
         </g>
         <title>Battery (House) — cabin:bulkhead:starboard — I 100/–/–</title>
       </g>
-      <g id="node-2-5" data-entity="distribution" data-i-dist-max-1="15.8" data-i-dist-max-2="6.8" data-i-dist-min-1="1" data-i-dist-min-2="0" data-i-dist-typ-1="1.7" data-i-dist-typ-2="0.5" data-mfr="Blue Sea Systems" data-mfr-max-current="300" data-net="dc12.pos" data-ocp-on-post="true" data-pn="5191" data-product-url="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A" data-role="distribution" data-uid="dist.batt.house">
+      <g id="node-2-5" data-entity="distribution" data-i-dist-max-1="16.3" data-i-dist-max-2="6.8" data-i-dist-min-1="1.1" data-i-dist-min-2="0" data-i-dist-typ-1="1.8" data-i-dist-typ-2="0.5" data-mfr="Blue Sea Systems" data-mfr-max-current="300" data-net="dc12.pos" data-ocp-on-post="true" data-pn="5191" data-product-url="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A" data-role="distribution" data-uid="dist.batt.house">
         <a href="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A">
           <circle class="node-bg" cx="1018" cy="538" r="160" />
           <text class="dist-label" x="1018" y="538">MRBF H</text>
@@ -532,7 +532,7 @@
           <g id="dist.batt.house.term.batt" data-role="input" />
           <g id="dist.batt.house.term.load" data-role="output" />
         </g>
-        <title>MRBF Fuse Block (House) — cabin:bulkhead:starboard — ΣI 22.6/2.2/1</title>
+        <title>MRBF Fuse Block (House) — cabin:bulkhead:starboard — ΣI 23.1/2.3/1.1</title>
       </g>
     </g>
     <g id="node-3">
@@ -647,7 +647,7 @@
       </g>
     </g>
     <g id="node-4">
-      <g id="node-4-0" data-entity="distribution" data-i-dist-max="8.2" data-i-dist-min="0.7" data-i-dist-typ="0.9" data-mfr="Blue Sea Systems" data-mfr-max-circuit="30" data-mfr-max-current="100" data-pn="5025" data-product-url="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover" data-role="distribution" data-uid="dist.sw.navcom">
+      <g id="node-4-0" data-entity="distribution" data-i-dist-max="8.7" data-i-dist-min="0.8" data-i-dist-typ="1.0" data-mfr="Blue Sea Systems" data-mfr-max-circuit="30" data-mfr-max-current="100" data-pn="5025" data-product-url="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover" data-role="distribution" data-uid="dist.sw.navcom">
         <a href="https://www.bluesea.com/products/5025/ST_Blade_Fuse_Block_-_6_Circuits_with_Negative_Bus_and_Cover">
           <circle class="node-bg" cx="1018" cy="-1018" r="160" />
           <text class="dist-label" x="1018" y="-1018">NAV/COM</text>
@@ -684,7 +684,7 @@
           </g>
           <title>AIS Power Switch — cabin:bulkhead:panel — UP=On;DN=Off</title>
         </g>
-        <title>NAV/COM Fuse Block (switched) — cabin:bulkhead:panel — ΣI 8.2/0.9/0.7</title>
+        <title>NAV/COM Fuse Block (switched) — cabin:bulkhead:panel — ΣI 8.7/1.0/0.8</title>
       </g>
       <g id="node-4-1" data-entity="load" data-len-n2k="4" data-mfr="Raymarine" data-mfr-i-max="0.2" data-pn="E70148" data-power="n2k-only" data-product-url="https://www.raymarine.com/en-us/our-products/marine-instruments/i50-and-i60-series/i50-depth" data-role="load" data-switch="integral" data-switch-mode="soft" data-uid="load.depth">
         <a href="https://www.raymarine.com/en-us/our-products/marine-instruments/i50-and-i60-series/i50-depth">
@@ -725,7 +725,7 @@
         </g>
         <title>Self-contained Boat Network — cabin:bulkhead:panel — I 0.4/0.1/0.1</title>
       </g>
-      <g id="node-4-4" data-entity="load" data-len-n2k="1" data-max-tx-pw="2" data-mfr="em-trak" data-mfr-fuse="3" data-mfr-i-max="2" data-mfr-i-peak="2" data-mfr-i-typ="0.245" data-pn="B923" data-product-url="https://em-trak.com/b900-series" data-rf-failsafe="pass-through" data-role="load" data-uid="load.ais">
+      <g id="node-4-4" data-entity="load" data-len-n2k="1" data-max-tx-pw="2" data-mfr="em-trak" data-mfr-fuse="3" data-mfr-i-max="2.5" data-mfr-i-peak="2.5" data-mfr-i-typ="0.28" data-pn="B923" data-product-url="https://em-trak.com/b900-series" data-rf-failsafe="pass-through" data-role="load" data-uid="load.ais">
         <a href="https://em-trak.com/b900-series">
           <circle class="node-bg" cx="1357" cy="-1357" r="160" />
           <text x="1357" y="-1357">AIS</text>
@@ -737,7 +737,7 @@
           <g id="load.ais.term.rf.in" data-net="rf" data-role="antenna-in (splitter)" />
           <g id="load.ais.term.rf.out" data-net="rf" data-role="antenna-out" />
         </g>
-        <title>AIS Transceiver — cabin:bulkhead:panel — I 2/0.2/–</title>
+        <title>AIS Transceiver — cabin:bulkhead:panel — I 2.5/0.3/–</title>
       </g>
       <g id="node-4-4-4" data-connector="SO-239" data-entity="antenna" data-length="0.91" data-location="mast" data-mfr="Shakespeare" data-pn="5215" data-product-url="https://shakespeare-marine.com/product/classic-vhf-antennas" data-uid="antenna.vhf">
         <a href="https://shakespeare-marine.com/product/classic-vhf-antennas">
@@ -1008,7 +1008,7 @@
         </g>
         <title>Battery (Reserve) — cabin:bulkhead:port — I 100/–/–</title>
       </g>
-      <g id="node-8-5" data-entity="distribution" data-i-dist-max-1="12.8" data-i-dist-max-2="21.8" data-i-dist-min-1="0" data-i-dist-min-2="1" data-i-dist-typ-1="0.5" data-i-dist-typ-2="1.7" data-mfr="Blue Sea Systems" data-mfr-max-current="300" data-net="dc12.pos" data-ocp-on-post="true" data-pn="5191" data-product-url="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A" data-role="distribution" data-uid="dist.batt.reserve">
+      <g id="node-8-5" data-entity="distribution" data-i-dist-max-1="12.8" data-i-dist-max-2="22.3" data-i-dist-min-1="0" data-i-dist-min-2="1.1" data-i-dist-typ-1="0.5" data-i-dist-typ-2="1.8" data-mfr="Blue Sea Systems" data-mfr-max-current="300" data-net="dc12.pos" data-ocp-on-post="true" data-pn="5191" data-product-url="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A" data-role="distribution" data-uid="dist.batt.reserve">
         <a href="https://www.bluesea.com/products/5191/MRBF_Terminal_Fuse_Block_-_30_to_300A">
           <circle class="node-bg" cx="-1018" cy="538" r="160" />
           <text class="dist-label" x="-1018" y="538">MRBF R</text>
@@ -1020,7 +1020,7 @@
           <g id="dist.batt.reserve.term.batt" data-role="input" />
           <g id="dist.batt.reserve.term.load" data-role="output" />
         </g>
-        <title>MRBF Fuse Block (Reserve) — cabin:bulkhead:port — ΣI 34.6/2.2/1</title>
+        <title>MRBF Fuse Block (Reserve) — cabin:bulkhead:port — ΣI 35.1/2.3/1.1</title>
       </g>
     </g>
   </g>
