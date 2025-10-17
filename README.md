@@ -322,7 +322,7 @@ You’re building something real — something that will carry you across oceans
   * `fuse.batt.house`
 * `dist.sw.navcom` *Selector = 1*
 
-  * I 8.2 / 0.9 / 0.7
+  * I 8.7 / 1.0 / 0.8
   * `fuse.batt.house`
 
 #### BOM
@@ -502,7 +502,7 @@ You’re building something real — something that will carry you across oceans
 
 * `load.ais`
 
-  * I 2.0 / 0.2 / –
+  * I 2.5 / 0.3 / –
   * `fuse.sw.navcom.ais` — 3 A [Blue Sea 5237](https://www.bluesea.com/products/5237/ATO___ATC_Fuse_-_3_Amp)
 * `load.gps`
 
@@ -590,7 +590,7 @@ You’re building something real — something that will carry you across oceans
   * `fuse.batt.reserve`
 * `dist.sw.navcom` *Selector = 2*
 
-  * I 8.2 / 0.9 / 0.7
+  * I 8.7 / 1.0 / 0.8
   * `fuse.batt.reserve`
 
 #### BOM
@@ -725,7 +725,7 @@ You’re building something real — something that will carry you across oceans
   * `fuse.batt.house`
 * `dist.sw.navcom` *Selector = 1*
 
-  * I 8.2 / 0.9 / 0.7
+  * I 8.7 / 1.0 / 0.8
   * `fuse.batt.house`
 
 #### BOM
@@ -905,7 +905,7 @@ You’re building something real — something that will carry you across oceans
 
 * `load.ais`
 
-  * I 2.0 / 0.2 / –
+  * I 2.5 / 0.3 / –
   * `fuse.sw.navcom.ais` — 3 A [Blue Sea 5237](https://www.bluesea.com/products/5237/ATO___ATC_Fuse_-_3_Amp)
 * `load.gps`
 
@@ -993,7 +993,7 @@ You’re building something real — something that will carry you across oceans
   * `fuse.batt.reserve`
 * `dist.sw.navcom` *Selector = 2*
 
-  * I 8.2 / 0.9 / 0.7
+  * I 8.7 / 1.0 / 0.8
   * `fuse.batt.reserve`
 
 #### BOM
